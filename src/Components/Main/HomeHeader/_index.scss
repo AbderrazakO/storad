@@ -1,0 +1,217 @@
+// @import '../../Assets/Styles/root';
+
+.homeHeader {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // box-shadow: inset 0px 2px -2px 2px rgba(255, 255, 204, 0.7),
+  //   inset 0px -2px -2px 2px rgba(255, 255, 204, 0.7);
+  border-bottom: 1px solid #222;
+  .presentationSection {
+    width: 100%;
+    height: 520px;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    // background-color: aqua;
+    background-image: url('https://images.unsplash.com/photo-1615485925873-7ecbbe90a866?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG51dHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+    // background-image: url('../../../Assets/Images/H10.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    .presCard {
+      background-color: var(--color-white-primary);
+      width: auto;
+      min-height: 50px;
+      font-family: var(--font-poppins);
+      // text-align: justify;
+      padding: 5px;
+      width: 50%;
+      position: relative;
+      top: 0;
+      left: 0;
+      &:nth-child(1) {
+        background-color: #84a98c;
+        border-radius: 10px 10px 0 10px;
+        width: 60%;
+        top: 4%;
+        left: 2%;
+      }
+      &:nth-child(2) {
+        background-color: #f7ede2;
+        border-radius: 10px 10px 10px 0;
+        width: 58%;
+        top: 6%;
+        left: 40%;
+      }
+      &:nth-child(3) {
+        background-color: #f4a261;
+        border-radius: 10px 0 10px 10px;
+        width: 68%;
+        top: 30%;
+        left: 2%;
+      }
+      &:nth-child(4) {
+        background-color: #e63946;
+        border-radius: 0 10px 10px 10px;
+        width: 58%;
+        top: 35%;
+        left: 40%;
+      }
+    }
+  }
+  .homeHeaderArticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem;
+    h1 {
+      width: 100%;
+      font-size: 3rem;
+      font-family: 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+    p {
+      width: 100%;
+      font-size: 2rem;
+      // background-color: blanchedalmond;
+      text-align: justify;
+      margin: 1rem 0;
+    }
+    .homeHeaderBtn {
+      width: auto;
+      background-color: #222;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.5;
+      min-height: 44px;
+      min-width: 10px;
+      padding: 9px 20px 8px;
+      text-align: center;
+      text-transform: none;
+      touch-action: manipulation;
+      &:hover,
+      &:focus {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+//
+@media screen and (min-width: 765px) {
+  .homeHeader {
+    width: 100%;
+    height: 500px;
+    // padding: 1rem 3rem;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    // background-color: rgb(190, 121, 35);
+    .homeHeaderArticle {
+      width: 50%;
+      align-items: flex-start;
+      h1 {
+        font-size: 2.5rem;
+        text-align: left;
+        width: 80%;
+      }
+      p {
+        font-size: 1.5rem;
+        text-align: left;
+        width: 80%;
+      }
+      .homeHeaderBtn {
+        margin-left: 4rem;
+      }
+    }
+    .presentationSection {
+      width: 50%;
+      height: 500px;
+      padding: 0.5rem;
+      .presCard {
+        &:nth-child(1) {
+          width: 60%;
+          top: 2%;
+          left: 0;
+        }
+        &:nth-child(2) {
+          width: 60%;
+          top: 6%;
+          left: 40%;
+        }
+        &:nth-child(3) {
+          width: 70%;
+          top: 30%;
+          left: 2%;
+        }
+        &:nth-child(4) {
+          width: 58%;
+          top: 35%;
+          left: 40%;
+        }
+      }
+    }
+  }
+}
+//@at-root
+@media screen and (min-width: 1024px) {
+  .homeHeader {
+    width: 100%;
+    height: 500px;
+    // padding: 1rem 3rem;
+    // padding: 0;
+    display: flex;
+    flex-direction: row;
+    // background-color: bisque;
+    .homeHeaderArticle {
+      width: 50%;
+      align-items: flex-start;
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+      .homeHeaderBtn {
+        margin-left: 5rem;
+      }
+    }
+    .presentationSection {
+      width: 50%;
+      height: 500px;
+      padding: 0.5rem;
+      .presCard {
+        &:nth-child(1) {
+          width: 55%;
+          top: 6%;
+          left: 0;
+        }
+        &:nth-child(2) {
+          width: 55%;
+          top: 10%;
+          left: 45%;
+        }
+        &:nth-child(3) {
+          width: 60%;
+          top: 30%;
+          left: -10px;
+        }
+        &:nth-child(4) {
+          width: 50%;
+          top: 40%;
+          left: 48%;
+        }
+      }
+    }
+  }
+}

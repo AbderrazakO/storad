@@ -1,0 +1,249 @@
+.popUpContainer {
+  background: none;
+  position: relative;
+
+  .popUpButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: violet;
+    position: fixed;
+    padding: 0.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 2rem;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+    //   rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+
+    svg {
+      fill: #10031b;
+      width: 25px;
+      height: 25px;
+      // width: 25px;
+      // height: 25px;
+    }
+  }
+
+  .popUpWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    padding: 1rem;
+    top: 10vh;
+    left: -40vw;
+    width: 80vw;
+    height: 80vh;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 10px;
+    font-family: var(--font-poppins);
+
+    .bagHeader {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      .bagTitle {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .closeBtn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        opacity: 0.8;
+        background-color: #c0c0be;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .bagMain {
+      width: 100%;
+      height: 600px;
+      flex-grow: 1;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .specialCard {
+        // background-color: brown;
+        min-width: 250px;
+        height: 100%;
+        border: 2px dashed #222;
+        margin-right: 0.5rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: var(--font-poppins);
+        .rowOne {
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+        .rowTwo {
+          font-weight: 400;
+          font-size: 1.2rem;
+        }
+      }
+      .otherCards {
+        flex-grow: 1;
+        height: 100%;
+        gap: 10px;
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll;
+        .bagCard {
+          background-color: #f1faee;
+          min-width: 250px;
+          width: 250px;
+          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          font-family: var(--font-poppins);
+          padding-bottom: 0.2rem;
+          overflow: hidden;
+          .cardImg {
+            width: 100%;
+            height: 190px;
+            overflow: hidden;
+            img {
+              height: auto;
+              width: 100%;
+            }
+          }
+
+          .infoBox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            div {
+              width: 100%;
+              text-align: center;
+            }
+            .productName,
+            .productPrice {
+              font-weight: 600;
+            }
+          }
+
+          .cardBtnBox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            // background-color: lightcoral;
+            width: 100%;
+            height: 50px;
+            // gap: 10px;
+            .bagBtn {
+              background-color: #fff;
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              svg {
+                fill: #222;
+                width: 20px;
+                height: 20px;
+              }
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+      .otherCards {
+        &::-webkit-scrollbar {
+          width: 4px;
+          height: 4px;
+        }
+        &::-webkit-scrollbar-button {
+          width: 0px;
+          height: 0px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #e1e1e1;
+          border: 12px none #ffffff;
+          border-radius: 45px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: #ffffff;
+        }
+        &::-webkit-scrollbar-thumb:active {
+          background: #000000;
+        }
+        &::-webkit-scrollbar-track {
+          background: #666666;
+          border: 5px none #ffffff;
+          border-radius: 25px;
+        }
+        &::-webkit-scrollbar-track:hover {
+          background: #666666;
+        }
+        &::-webkit-scrollbar-track:active {
+          background: #333333;
+        }
+        &::-webkit-scrollbar-corner {
+          background: transparent;
+        }
+      }
+    }
+
+    .bagFooter {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .bagBtn {
+        width: 150px;
+        background-color: #222;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        font-family: var(--font-poppins);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        min-height: 44px;
+        min-width: 10px;
+        padding: 9px 20px 8px;
+        text-align: center;
+        text-transform: none;
+        touch-action: manipulation;
+        &:hover,
+        &:focus {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+}

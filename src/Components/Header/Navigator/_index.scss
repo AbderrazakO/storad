@@ -1,0 +1,31 @@
+.sectionsNav {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .link {
+    margin-right: 1.3rem;
+    padding: 0.5rem 0.8rem;
+    font-size: 2rem;
+    color: var(--color-text);
+  }
+  .active {
+    color: #ec3434e0;
+    font-size: 2.2rem;
+    animation: dw 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+  }
+}
+
+@media screen and (min-width: 950px) {
+  .sectionsNav {
+    width: auto;
+    position: relative;
+    top: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
