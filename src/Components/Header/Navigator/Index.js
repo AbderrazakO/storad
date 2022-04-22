@@ -19,7 +19,6 @@ const Navigator = () => {
         <Link
           to='/'
           className={`link ${active[0]}`}
-          href='#'
           onClick={() => {
             activeLink(0)
           }}
@@ -29,7 +28,6 @@ const Navigator = () => {
         <Link
           to='/shop'
           className={`link ${active[1]}`}
-          href='#'
           onClick={() => {
             activeLink(1)
           }}
@@ -39,7 +37,6 @@ const Navigator = () => {
         <Link
           to='/contact'
           className={`link ${active[2]}`}
-          href='#'
           onClick={() => {
             activeLink(2)
           }}
@@ -49,7 +46,6 @@ const Navigator = () => {
         <Link
           to='/help'
           className={`link ${active[3]}`}
-          href='#'
           onClick={() => {
             activeLink(3)
           }}

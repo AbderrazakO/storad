@@ -1,9 +1,11 @@
+//@at-root
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 //
 :root {
   // Fonts
-  --font-logo: 'Pacifico', cursive;
+  --font-logo: 'Work Sans', sans-serif;
   --font-primary: 'Dongle', sans-serif;
   --font-poppins: 'Poppins', sans-serif;
   --font-time: 'Times New Roman', Times, serif;

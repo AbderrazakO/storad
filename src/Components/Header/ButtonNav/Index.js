@@ -1,17 +1,18 @@
 import React from 'react'
+import { UserIcon, ShopIcon, DarkModeIcon } from './icons'
 
 const ButtonNav = () => {
   return (
     <div className='headerButtonContainer'>
-      <a href='/'>
+      <a href='/' className='headerBtn'>
         <UserIcon />
       </a>
-      <a href='/'>
+      <a href='/' className='headerBtn'>
         <ShopIcon />
       </a>
-      <a href='/'>
+      <button className='headerBtn'>
         <DarkModeIcon />
-      </a>
+      </button>
     </div>
   )
 }

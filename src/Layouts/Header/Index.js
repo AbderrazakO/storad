@@ -1,10 +1,21 @@
 import React from 'react'
-import ResNav from '../../Components/Header/ResponsiveNavBar/ResponsiveNavBar'
+import ResNav from '../../Components/Header/ResponsiveNavBar/Index'
+import Logo from '../../Components/Header/Logo/Index'
+import Nav from '../../Components/Header/Navigator/Index'
+import Buttons from '../../Components/Header/ButtonNav/Index'
 
 const Index = () => {
   return (
     <>
-      <ResNav logo={'Storad'} navBar={'Hi'} />
+      <ResNav
+        logo={<Logo />}
+        navBar={
+          <>
+            <Nav />
+            <Buttons />
+          </>
+        }
+      />
     </>
   )
 }
