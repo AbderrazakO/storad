@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import img from '../../../Assets/images/products/00.png'
 
 const HomeHeader = () => {
   return (
@@ -9,9 +11,12 @@ const HomeHeader = () => {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
           eos.
         </p>
-        <button className='homeHeaderBtn'>Start Shopping</button>
+        <Link to='/shop' className='homeHeaderBtn'>
+          Start Shopping
+        </Link>
       </article>
       <article className='presentationSection'>
+        <img src={img} alt='' srcset='' />
         <div className='presCard'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
           obcaecati!

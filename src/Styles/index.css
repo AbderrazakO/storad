@@ -1,18 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap");
 :root {
-  --font-logo: 'Work Sans', sans-serif;
-  --font-primary: 'Dongle', sans-serif;
-  --font-poppins: 'Poppins', sans-serif;
-  --font-time: 'Times New Roman', Times, serif;
-  --shadow-primary: #32325d40 0px 2px 5px -1px, #0000004d 0px 1px 3px -1px;
-  --shadow-secondary: #0000001f 0px 1px 3px, #0000003d 0px 1px 2px;
-  --color-main: #f0f8ff;
-  --color-text: #14213d;
+  --righteous-font: 'Righteous', cursive;
+  --dongle-font: 'Dongle', sans-serif;
+  --poppins-font: 'Poppins', sans-serif;
+  --shadow-1: #00000026 0px 3px 3px 0px;
+  --shadow-2: #0000001f 0px 1px 3px, #0000003d 0px 1px 2px;
+  --background-color: #ffffff;
+  --text-color-1: #14213d;
+  --text-color-2: #b9bbbe;
+  --text-color-3: #61656b;
+  --text-color-4: #14213d;
   --color-one: #ec3434e0;
+  --color-active: #ec3434e0;
   --color-white-primary: #ffffff;
   --color-white-secondary: #f0f8ff;
+  --color-dark-primary: #212529;
+  --color-red-primary: #ec3434e0;
+  --color-blue-primary: #5f9ea0;
+}
+
+.dark {
+  --background-color: #36393f;
+  --text-color-1: #fff;
+  --text-color-2: #b9bbbe;
+  --text-color-3: #61656b;
+  --text-color-4: #14213d;
+  --color-main: #14213d;
+  --color-text: #b9bbbe;
+  --color-active: #f8a3a3e0;
+  --color-one: #d18989e0;
+  --color-white-primary: #38e232;
+  --color-white-secondary: #4a88be;
   --color-dark-primary: #212529;
   --color-red-primary: #ec3434e0;
   --color-blue-primary: #5f9ea0;
@@ -45,11 +63,12 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+  background-color: var(--background-color);
 }
 
 header {
-  width: 100vw;
-  height: 10vh;
+  width: 100%;
+  min-height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,20 +82,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: var(--font-primary);
-  color: var(--color-text);
-}
-
-header .mobileShow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-header .log {
-  font-family: var(--font-logo);
-  font-size: 2rem;
-  text-transform: lowercase;
+  padding: 0 1rem;
 }
 
 header #showNav {
@@ -110,9 +116,10 @@ header .handleNavigator {
   position: absolute;
   left: -100%;
   bottom: 0;
-  width: 100%;
   height: 90vh;
-  background-color: var(--color-white-primary);
+  width: 100%;
+  background-color: var(--background-color);
+  opacity: 1;
   border-top: 1px solid #333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,18 +143,11 @@ header #showNav:checked ~ .handleNavigator {
   left: 0;
 }
 
-@media (min-width: 950px) {
+@media screen and (min-width: 950px) {
   header {
     width: 90vw;
     height: 60px;
     margin-bottom: 20px;
-  }
-  header .mobileShow {
-    display: none;
-  }
-  header .log {
-    font-size: 2.1rem;
-    width: 10vw;
   }
   header .menuBtn {
     display: none;
@@ -178,7 +178,8 @@ header #showNav:checked ~ .handleNavigator {
 }
 
 .brandLogo {
-  font-family: var(--font-logo);
+  font-family: var(--righteous-font);
+  color: var(--text-color-1);
   font-weight: 500;
   font-size: 2rem;
   text-transform: lowercase;
@@ -188,6 +189,50 @@ header #showNav:checked ~ .handleNavigator {
   .brandLogo {
     font-size: 2.1rem;
     width: 10vw;
+  }
+}
+
+@-webkit-keyframes activeBtnIn {
+  from {
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+  to {
+    color: var(--color-active);
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes activeBtnIn {
+  from {
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+  to {
+    color: var(--color-active);
+    font-size: 1.5rem;
+  }
+}
+
+@-webkit-keyframes activeBtnOut {
+  from {
+    color: var(--color-active);
+    font-size: 1.5rem;
+  }
+  to {
+    font-size: 1.2rem;
+    color: var(--color-text);
+  }
+}
+
+@keyframes activeBtnOut {
+  from {
+    color: var(--color-active);
+    font-size: 1.5rem;
+  }
+  to {
+    font-size: 1.2rem;
+    color: var(--color-text);
   }
 }
 
@@ -207,20 +252,23 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: var(--background-color);
 }
 
-.sectionsNav .link {
+.sectionsNav a {
   margin-right: 1.3rem;
   padding: 0.5rem 0.8rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: var(--font-poppins);
   color: var(--color-text);
 }
 
 .sectionsNav .active {
-  color: #ec3434e0;
-  font-size: 2.2rem;
-  -webkit-animation: dw 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
-          animation: dw 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+  color: var(--color-active);
+  font-size: 1.5rem;
+  -webkit-animation: activeBtnIn 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+          animation: activeBtnIn 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
 }
 
 @media screen and (min-width: 950px) {
@@ -317,6 +365,258 @@ header #showNav:checked ~ .handleNavigator {
   }
   .headerButtonContainer .headerBtn:hover {
     border: 1px solid var(--color-text);
+  }
+}
+
+main {
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    width: 90vw;
+  }
+}
+
+.homeHeader {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #222;
+}
+
+.homeHeader .presentationSection {
+  width: 100%;
+  height: 520px;
+  padding-bottom: 0.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.homeHeader .presentationSection .presCard {
+  background-color: var(--color-white-primary);
+  width: auto;
+  min-height: 50px;
+  font-family: var(--font-poppins);
+  padding: 5px;
+  width: 50%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.homeHeader .presentationSection .presCard:nth-child(1) {
+  background-color: #84a98c;
+  border-radius: 10px 10px 0 10px;
+  width: 60%;
+  top: 4%;
+  left: 2%;
+}
+
+.homeHeader .presentationSection .presCard:nth-child(2) {
+  background-color: #f7ede2;
+  border-radius: 10px 10px 10px 0;
+  width: 58%;
+  top: 6%;
+  left: 40%;
+}
+
+.homeHeader .presentationSection .presCard:nth-child(3) {
+  background-color: #f4a261;
+  border-radius: 10px 0 10px 10px;
+  width: 68%;
+  top: 30%;
+  left: 2%;
+}
+
+.homeHeader .presentationSection .presCard:nth-child(4) {
+  background-color: #e63946;
+  border-radius: 0 10px 10px 10px;
+  width: 58%;
+  top: 35%;
+  left: 40%;
+}
+
+.homeHeader .homeHeaderArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.homeHeader .homeHeaderArticle h1 {
+  width: 100%;
+  font-size: 3rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.homeHeader .homeHeaderArticle p {
+  width: 100%;
+  font-size: 2rem;
+  text-align: justify;
+  margin: 1rem 0;
+}
+
+.homeHeader .homeHeaderArticle .homeHeaderBtn {
+  width: auto;
+  background-color: #222;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-family: var(--font-poppins);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  min-height: 44px;
+  min-width: 10px;
+  padding: 9px 20px 8px;
+  text-align: center;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
+.homeHeader .homeHeaderArticle .homeHeaderBtn:hover, .homeHeader .homeHeaderArticle .homeHeaderBtn:focus {
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 765px) {
+  .homeHeader {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    border: none;
+    -webkit-box-shadow: var(--shadow-primary);
+            box-shadow: var(--shadow-primary);
+  }
+  .homeHeader .homeHeaderArticle {
+    width: 50%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .homeHeader .homeHeaderArticle h1 {
+    font-size: 2.5rem;
+    text-align: left;
+    width: 80%;
+  }
+  .homeHeader .homeHeaderArticle p {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 80%;
+  }
+  .homeHeader .homeHeaderArticle .homeHeaderBtn {
+    margin-left: 4rem;
+  }
+  .homeHeader .presentationSection {
+    width: 50%;
+    height: 500px;
+    padding: 0.5rem;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(1) {
+    width: 60%;
+    top: 2%;
+    left: 0;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(2) {
+    width: 60%;
+    top: 6%;
+    left: 40%;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(3) {
+    width: 70%;
+    top: 30%;
+    left: 2%;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(4) {
+    width: 58%;
+    top: 35%;
+    left: 40%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homeHeader {
+    width: 100%;
+    height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .homeHeader .homeHeaderArticle {
+    width: 50%;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .homeHeader .homeHeaderArticle h1 {
+    font-size: 3.5rem;
+  }
+  .homeHeader .homeHeaderArticle p {
+    font-size: 2rem;
+  }
+  .homeHeader .homeHeaderArticle .homeHeaderBtn {
+    margin-left: 5rem;
+  }
+  .homeHeader .presentationSection {
+    width: 50%;
+    height: 500px;
+    padding: 0.5rem;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(1) {
+    width: 55%;
+    top: 6%;
+    left: 0;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(2) {
+    width: 55%;
+    top: 10%;
+    left: 45%;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(3) {
+    width: 60%;
+    top: 30%;
+    left: -10px;
+  }
+  .homeHeader .presentationSection .presCard:nth-child(4) {
+    width: 50%;
+    top: 40%;
+    left: 48%;
   }
 }
 /*# sourceMappingURL=index.css.map */
