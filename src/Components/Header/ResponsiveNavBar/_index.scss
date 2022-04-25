@@ -1,11 +1,13 @@
 header {
   width: 100%;
   min-height: 10vh;
+  height: 10vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  background-color: var(--background-color);
 
   #showNav {
     display: none;
@@ -19,21 +21,21 @@ header {
     border-radius: 50%;
     background-color: var(--color-blue-primary);
     cursor: pointer;
+    //
     svg {
-      fill: var(--color-white-primary);
+      fill: var(--background-color);
       width: 20px;
       height: 20px;
     }
   }
   .handleNavigator {
-    position: absolute;
+    position: fixed;
     left: -100%;
     bottom: 0;
-    height: 90vh;
     width: 100%;
+    height: 90%;
     background-color: var(--background-color);
-    opacity: 1;
-    border-top: 1px solid #333;
+    border-top: 1px solid var(--text-color-1);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,7 +44,10 @@ header {
     z-index: 999;
   }
   #showNav:checked ~ .handleNavigator {
+    position: absolute;
+    height: 90%;
     left: 0;
+    bottom: 0;
   }
 }
 
@@ -52,6 +57,7 @@ header {
     width: 90vw;
     height: 60px;
     margin-bottom: 20px;
+    padding: 0;
 
     .menuBtn {
       display: none;

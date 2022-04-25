@@ -6,8 +6,10 @@ const HomeHeader = () => {
   return (
     <section className='homeHeader'>
       <article className='homeHeaderArticle'>
-        <h1>Every Purchase Will Be Made With Pleasure</h1>
-        <p>
+        <h1 className='articleTitle'>
+          Every Purchase Will Be Made With Pleasure
+        </h1>
+        <p className='description'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
           eos.
         </p>
@@ -16,19 +18,21 @@ const HomeHeader = () => {
         </Link>
       </article>
       <article className='presentationSection'>
-        <img src={img} alt='' srcset='' />
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-          obcaecati!
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum.
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing.
+        <img srcset={img} className='mainImg' alt='Presentation image' />
+        <div className='cards'>
+          <div className='presCard'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
+            obcaecati!
+          </div>
+          <div className='presCard'>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </div>
+          <div className='presCard'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum.
+          </div>
+          <div className='presCard'>
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </div>
         </div>
       </article>
     </section>

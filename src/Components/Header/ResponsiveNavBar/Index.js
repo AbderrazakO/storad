@@ -11,9 +11,11 @@ const Index = ({ logo, navBar }) => {
     if (state) {
       setState(false)
       root.style.height = 'auto'
+      root.style.overflow = 'visible'
     } else {
       setState(true)
       root.style.height = '100vh'
+      root.style.overflow = 'hidden'
     }
   }
 

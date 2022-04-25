@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Navigator = () => {
-  let [active, setActive] = useState(['active', '', '', ''])
+  let [active, setActive] = useState(['active', '', ''])
 
   let activeLink = (id) => {
     let newList = []
@@ -34,20 +34,12 @@ const Navigator = () => {
         >
           Shop
         </Link>
+
         <Link
-          to='/contact'
+          to='/help'
           className={`link ${active[2]}`}
           onClick={() => {
             activeLink(2)
-          }}
-        >
-          Contact
-        </Link>
-        <Link
-          to='/help'
-          className={`link ${active[3]}`}
-          onClick={() => {
-            activeLink(3)
           }}
         >
           Help

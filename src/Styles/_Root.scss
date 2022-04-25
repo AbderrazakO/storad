@@ -18,6 +18,11 @@
   --text-color-2: #b9bbbe;
   --text-color-3: #61656b;
   --text-color-4: #14213d;
+  --link-active-color: #ec3434e0;
+  --btn-bg-color: #222;
+  --btn-color: #fff;
+
+  //
   --color-one: #ec3434e0;
   --color-active: #ec3434e0;
   --color-white-primary: #ffffff;
@@ -25,6 +30,7 @@
   --color-dark-primary: #212529;
   --color-red-primary: #ec3434e0;
   --color-blue-primary: #5f9ea0;
+  --sds-color: #f4a460;
 }
 .dark {
   // Colors
@@ -33,6 +39,9 @@
   --text-color-2: #b9bbbe;
   --text-color-3: #61656b;
   --text-color-4: #14213d;
+  --link-active-color: #f8a3a3e0;
+
+  //
   --color-main: #14213d;
   --color-text: #b9bbbe;
   --color-active: #f8a3a3e0;
@@ -41,7 +50,6 @@
   --color-white-secondary: #4a88be;
   --color-dark-primary: #212529;
   --color-red-primary: #ec3434e0;
-  --color-blue-primary: #5f9ea0;
 }
 
 //
@@ -61,5 +69,6 @@ body {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
+  height: auto;
   background-color: var(--background-color);
 }

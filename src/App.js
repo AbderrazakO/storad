@@ -25,6 +25,15 @@ function App() {
             </>
           }
         />
+        <Route
+          path='/help'
+          element={
+            <>
+              <Header />
+              <Hmain />
+            </>
+          }
+        />
       </Routes>
     </BrowserRouter>
   )

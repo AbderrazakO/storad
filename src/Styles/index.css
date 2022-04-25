@@ -10,6 +10,9 @@
   --text-color-2: #b9bbbe;
   --text-color-3: #61656b;
   --text-color-4: #14213d;
+  --link-active-color: #ec3434e0;
+  --btn-bg-color: #222;
+  --btn-color: #fff;
   --color-one: #ec3434e0;
   --color-active: #ec3434e0;
   --color-white-primary: #ffffff;
@@ -17,6 +20,7 @@
   --color-dark-primary: #212529;
   --color-red-primary: #ec3434e0;
   --color-blue-primary: #5f9ea0;
+  --sds-color: #f4a460;
 }
 
 .dark {
@@ -25,6 +29,7 @@
   --text-color-2: #b9bbbe;
   --text-color-3: #61656b;
   --text-color-4: #14213d;
+  --link-active-color: #f8a3a3e0;
   --color-main: #14213d;
   --color-text: #b9bbbe;
   --color-active: #f8a3a3e0;
@@ -33,7 +38,6 @@
   --color-white-secondary: #4a88be;
   --color-dark-primary: #212529;
   --color-red-primary: #ec3434e0;
-  --color-blue-primary: #5f9ea0;
 }
 
 * {
@@ -63,12 +67,14 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 100%;
+  height: auto;
   background-color: var(--background-color);
 }
 
 header {
   width: 100%;
   min-height: 10vh;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,6 +89,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 1rem;
+  background-color: var(--background-color);
 }
 
 header #showNav {
@@ -107,20 +114,19 @@ header .menuBtn {
 }
 
 header .menuBtn svg {
-  fill: var(--color-white-primary);
+  fill: var(--background-color);
   width: 20px;
   height: 20px;
 }
 
 header .handleNavigator {
-  position: absolute;
+  position: fixed;
   left: -100%;
   bottom: 0;
-  height: 90vh;
   width: 100%;
+  height: 90%;
   background-color: var(--background-color);
-  opacity: 1;
-  border-top: 1px solid #333;
+  border-top: 1px solid var(--text-color-1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,7 +146,10 @@ header .handleNavigator {
 }
 
 header #showNav:checked ~ .handleNavigator {
+  position: absolute;
+  height: 90%;
   left: 0;
+  bottom: 0;
 }
 
 @media screen and (min-width: 950px) {
@@ -148,6 +157,7 @@ header #showNav:checked ~ .handleNavigator {
     width: 90vw;
     height: 60px;
     margin-bottom: 20px;
+    padding: 0;
   }
   header .menuBtn {
     display: none;
@@ -194,51 +204,51 @@ header #showNav:checked ~ .handleNavigator {
 
 @-webkit-keyframes activeBtnIn {
   from {
-    font-size: 1.2rem;
-    color: var(--color-text);
+    font-size: 2rem;
+    color: var(--text-color-1);
   }
   to {
-    color: var(--color-active);
-    font-size: 1.5rem;
+    color: var(--link-active-color);
+    font-size: 2.5rem;
   }
 }
 
 @keyframes activeBtnIn {
   from {
-    font-size: 1.2rem;
-    color: var(--color-text);
+    font-size: 2rem;
+    color: var(--text-color-1);
   }
   to {
-    color: var(--color-active);
-    font-size: 1.5rem;
+    color: var(--link-active-color);
+    font-size: 2.5rem;
   }
 }
 
 @-webkit-keyframes activeBtnOut {
   from {
-    color: var(--color-active);
-    font-size: 1.5rem;
+    color: var(--link-active-color);
+    font-size: 2.5rem;
   }
   to {
-    font-size: 1.2rem;
-    color: var(--color-text);
+    font-size: 2rem;
+    color: var(--text-color-1);
   }
 }
 
 @keyframes activeBtnOut {
   from {
-    color: var(--color-active);
-    font-size: 1.5rem;
+    color: var(--link-active-color);
+    font-size: 2.5rem;
   }
   to {
-    font-size: 1.2rem;
-    color: var(--color-text);
+    font-size: 2rem;
+    color: var(--text-color-1);
   }
 }
 
 .sectionsNav {
   width: 100%;
-  height: 60%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,26 +266,25 @@ header #showNav:checked ~ .handleNavigator {
 }
 
 .sectionsNav a {
-  margin-right: 1.3rem;
-  padding: 0.5rem 0.8rem;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: 500;
-  font-family: var(--font-poppins);
-  color: var(--color-text);
+  font-family: var(--dongle-font);
+  color: var(--text-color-1);
+  -webkit-animation: activeBtnOut 0.2s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+          animation: activeBtnOut 0.2s cubic-bezier(0.86, 0.47, 0.01, 0.75);
 }
 
 .sectionsNav .active {
-  color: var(--color-active);
-  font-size: 1.5rem;
-  -webkit-animation: activeBtnIn 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
-          animation: activeBtnIn 0.5s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+  color: var(--link-active-color);
+  font-size: 2.5rem;
+  -webkit-animation: activeBtnIn 0.2s cubic-bezier(0.86, 0.47, 0.01, 0.75);
+          animation: activeBtnIn 0.2s cubic-bezier(0.86, 0.47, 0.01, 0.75);
 }
 
 @media screen and (min-width: 950px) {
   .sectionsNav {
     width: auto;
-    position: relative;
-    top: 5px;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -289,6 +298,11 @@ header #showNav:checked ~ .handleNavigator {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .sectionsNav a {
+    position: relative;
+    top: 5px;
+    padding-right: 2.5rem;
   }
 }
 
@@ -308,6 +322,7 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: var(--background-color);
 }
 
 .headerButtonContainer .headerBtn {
@@ -317,6 +332,7 @@ header #showNav:checked ~ .handleNavigator {
   border-radius: 50%;
   -webkit-box-shadow: var(--shadow-secondary);
           box-shadow: var(--shadow-secondary);
+  background-color: var(--text-color-1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -333,7 +349,7 @@ header #showNav:checked ~ .handleNavigator {
 }
 
 .headerButtonContainer .headerBtn svg {
-  fill: #333;
+  fill: var(--background-color);
   width: 25px;
   height: 25px;
 }
@@ -357,11 +373,14 @@ header #showNav:checked ~ .handleNavigator {
             justify-content: center;
   }
   .headerButtonContainer .headerBtn {
-    background-color: var(--color-white-secondary);
+    background-color: var(--background-color);
     -webkit-box-shadow: none;
             box-shadow: none;
     width: 35px;
     height: 35px;
+  }
+  .headerButtonContainer .headerBtn svg {
+    fill: var(--text-color-1);
   }
   .headerButtonContainer .headerBtn:hover {
     border: 1px solid var(--color-text);
@@ -394,60 +413,8 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #222;
-}
-
-.homeHeader .presentationSection {
-  width: 100%;
-  height: 520px;
-  padding-bottom: 0.5rem;
-  background-position: center;
-  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--text-color-1);
   overflow: hidden;
-}
-
-.homeHeader .presentationSection .presCard {
-  background-color: var(--color-white-primary);
-  width: auto;
-  min-height: 50px;
-  font-family: var(--font-poppins);
-  padding: 5px;
-  width: 50%;
-  position: relative;
-  top: 0;
-  left: 0;
-}
-
-.homeHeader .presentationSection .presCard:nth-child(1) {
-  background-color: #84a98c;
-  border-radius: 10px 10px 0 10px;
-  width: 60%;
-  top: 4%;
-  left: 2%;
-}
-
-.homeHeader .presentationSection .presCard:nth-child(2) {
-  background-color: #f7ede2;
-  border-radius: 10px 10px 10px 0;
-  width: 58%;
-  top: 6%;
-  left: 40%;
-}
-
-.homeHeader .presentationSection .presCard:nth-child(3) {
-  background-color: #f4a261;
-  border-radius: 10px 0 10px 10px;
-  width: 68%;
-  top: 30%;
-  left: 2%;
-}
-
-.homeHeader .presentationSection .presCard:nth-child(4) {
-  background-color: #e63946;
-  border-radius: 0 10px 10px 10px;
-  width: 58%;
-  top: 35%;
-  left: 40%;
 }
 
 .homeHeader .homeHeaderArticle {
@@ -464,51 +431,110 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
+  width: 95%;
   padding: 1.5rem;
 }
 
-.homeHeader .homeHeaderArticle h1 {
+.homeHeader .homeHeaderArticle .articleTitle {
   width: 100%;
-  font-size: 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
 }
 
-.homeHeader .homeHeaderArticle p {
+.homeHeader .homeHeaderArticle .description {
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-align: justify;
+  font-family: 'Times New Roman', Times, serif;
   margin: 1rem 0;
 }
 
 .homeHeader .homeHeaderArticle .homeHeaderBtn {
+  font-family: var(--poppins-font);
+  font-size: 0.9rem;
   width: auto;
-  background-color: #222;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
   border-radius: 5px;
-  color: #fff;
   cursor: pointer;
-  font-family: var(--font-poppins);
-  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
   font-weight: 600;
-  line-height: 1.5;
   min-height: 44px;
   min-width: 10px;
   padding: 9px 20px 8px;
-  text-align: center;
-  text-transform: none;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
 }
 
 .homeHeader .homeHeaderArticle .homeHeaderBtn:hover, .homeHeader .homeHeaderArticle .homeHeaderBtn:focus {
   opacity: 0.85;
 }
 
+.homeHeader .presentationSection {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.homeHeader .presentationSection .mainImg {
+  width: 100%;
+  height: auto;
+  min-width: 200px;
+}
+
+.homeHeader .presentationSection .cards {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.homeHeader .presentationSection .cards .presCard {
+  position: relative;
+  top: 0;
+  left: 0;
+  font-family: var(--poppins-font);
+  padding: 5px;
+  text-align: justify;
+  height: auto;
+  min-height: 50px;
+  width: auto;
+  max-width: 45%;
+}
+
+.homeHeader .presentationSection .cards .presCard:nth-child(1) {
+  background-color: #cdf008;
+  border-radius: 10px 10px 0 10px;
+  left: 4%;
+}
+
+.homeHeader .presentationSection .cards .presCard:nth-child(2) {
+  background-color: #046630;
+  border-radius: 10px 10px 10px 0;
+  left: 52%;
+}
+
+.homeHeader .presentationSection .cards .presCard:nth-child(3) {
+  background-color: #dd7928;
+  border-radius: 10px 0 10px 10px;
+  left: 4%;
+}
+
+.homeHeader .presentationSection .cards .presCard:nth-child(4) {
+  background-color: #95e639;
+  border-radius: 0 10px 10px 10px;
+  left: 52%;
+}
+
 @media screen and (min-width: 765px) {
   .homeHeader {
     width: 100%;
-    height: 500px;
+    height: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -517,106 +543,138 @@ main {
         -ms-flex-direction: row;
             flex-direction: row;
     border: none;
-    -webkit-box-shadow: var(--shadow-primary);
-            box-shadow: var(--shadow-primary);
+    -webkit-box-shadow: var(--shadow-1);
+            box-shadow: var(--shadow-1);
   }
   .homeHeader .homeHeaderArticle {
-    width: 50%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    width: 45%;
+    height: 100%;
+    padding: 1.5rem;
   }
-  .homeHeader .homeHeaderArticle h1 {
-    font-size: 2.5rem;
-    text-align: left;
-    width: 80%;
+  .homeHeader .homeHeaderArticle .articleTitle {
+    width: 100%;
+    font-size: 3rem;
   }
-  .homeHeader .homeHeaderArticle p {
+  .homeHeader .homeHeaderArticle .description {
+    width: 100%;
     font-size: 1.5rem;
-    text-align: left;
-    width: 80%;
   }
   .homeHeader .homeHeaderArticle .homeHeaderBtn {
-    margin-left: 4rem;
+    font-size: 1rem;
   }
   .homeHeader .presentationSection {
-    width: 50%;
-    height: 500px;
-    padding: 0.5rem;
+    width: 55%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 0;
   }
-  .homeHeader .presentationSection .presCard:nth-child(1) {
-    width: 60%;
-    top: 2%;
+  .homeHeader .presentationSection .mainImg {
+    height: 100%;
+    min-height: 200px;
+    width: auto;
+  }
+  .homeHeader .presentationSection .cards {
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
   }
-  .homeHeader .presentationSection .presCard:nth-child(2) {
-    width: 60%;
-    top: 6%;
-    left: 40%;
+  .homeHeader .presentationSection .cards .presCard {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: var(--poppins-font);
+    padding: 5px;
+    text-align: justify;
+    height: auto;
+    min-height: 50px;
+    width: auto;
+    max-width: 45%;
   }
-  .homeHeader .presentationSection .presCard:nth-child(3) {
-    width: 70%;
-    top: 30%;
+  .homeHeader .presentationSection .cards .presCard:nth-child(1) {
+    top: 5%;
     left: 2%;
   }
-  .homeHeader .presentationSection .presCard:nth-child(4) {
-    width: 58%;
-    top: 35%;
-    left: 40%;
+  .homeHeader .presentationSection .cards .presCard:nth-child(2) {
+    top: -10%;
+    left: 52%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(3) {
+    top: 10%;
+    left: 2%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(4) {
+    top: -5%;
+    left: 52%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .homeHeader {
-    width: 100%;
     height: 500px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
   }
   .homeHeader .homeHeaderArticle {
-    width: 50%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    width: 45%;
+    padding: 1.5rem;
   }
-  .homeHeader .homeHeaderArticle h1 {
-    font-size: 3.5rem;
+  .homeHeader .homeHeaderArticle .articleTitle {
+    width: 100%;
+    font-size: 3.85rem;
   }
-  .homeHeader .homeHeaderArticle p {
-    font-size: 2rem;
+  .homeHeader .homeHeaderArticle .description {
+    width: 100%;
+    font-size: 1.8rem;
   }
   .homeHeader .homeHeaderArticle .homeHeaderBtn {
-    margin-left: 5rem;
+    font-size: 1.1rem;
   }
   .homeHeader .presentationSection {
-    width: 50%;
-    height: 500px;
-    padding: 0.5rem;
-  }
-  .homeHeader .presentationSection .presCard:nth-child(1) {
     width: 55%;
-    top: 6%;
+    height: 100%;
+  }
+  .homeHeader .presentationSection .mainImg {
+    height: 100%;
+    min-height: 200px;
+    width: auto;
+  }
+  .homeHeader .presentationSection .cards {
+    position: absolute;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
   }
-  .homeHeader .presentationSection .presCard:nth-child(2) {
-    width: 55%;
+  .homeHeader .presentationSection .cards .presCard {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-family: var(--poppins-font);
+    padding: 5px;
+    text-align: justify;
+    height: auto;
+    min-height: 50px;
+    width: auto;
+    max-width: 45%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(1) {
+    top: 25%;
+    left: 2%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(2) {
+    top: 0%;
+    left: 52%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(3) {
+    top: 35%;
+    left: 2%;
+  }
+  .homeHeader .presentationSection .cards .presCard:nth-child(4) {
     top: 10%;
-    left: 45%;
-  }
-  .homeHeader .presentationSection .presCard:nth-child(3) {
-    width: 60%;
-    top: 30%;
-    left: -10px;
-  }
-  .homeHeader .presentationSection .presCard:nth-child(4) {
-    width: 50%;
-    top: 40%;
-    left: 48%;
+    left: 52%;
   }
 }
 /*# sourceMappingURL=index.css.map */
