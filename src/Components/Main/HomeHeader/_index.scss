@@ -16,6 +16,7 @@
     justify-content: center;
     width: 95%;
     padding: 1.5rem;
+    color: var(--text-color-0);
     .articleTitle {
       width: 100%;
       font-size: 1.8rem;
@@ -74,6 +75,7 @@
         top: 0;
         left: 0;
         font-family: var(--poppins-font);
+        font-size: 0.7rem;
         padding: 5px;
         text-align: justify;
         height: auto;
@@ -84,21 +86,25 @@
         &:nth-child(1) {
           background-color: #cdf008;
           border-radius: 10px 10px 0 10px;
+          top: 15%;
           left: 4%;
         }
         &:nth-child(2) {
           background-color: #046630;
           border-radius: 10px 10px 10px 0;
+          top: 5%;
           left: 52%;
         }
         &:nth-child(3) {
           background-color: #dd7928;
           border-radius: 10px 0 10px 10px;
+          top: 25%;
           left: 4%;
         }
         &:nth-child(4) {
           background-color: #95e639;
           border-radius: 0 10px 10px 10px;
+          top: 20%;
           left: 52%;
         }
       }
@@ -116,7 +122,7 @@
     display: flex;
     flex-direction: row;
     border: none;
-    // background-color: #e63946;
+    background-color: var(--background-color-2);
     box-shadow: var(--shadow-1);
 
     //
@@ -128,13 +134,16 @@
       .articleTitle {
         width: 100%;
         font-size: 3rem;
+        text-align: left;
       }
       .description {
         width: 100%;
         font-size: 1.5rem;
+        text-align: left;
       }
       .homeHeaderBtn {
         font-size: 1rem;
+        transform: translateX(-50px);
       }
     }
 
@@ -162,6 +171,7 @@
           top: 0;
           left: 0;
           font-family: var(--poppins-font);
+          font-size: 0.9rem;
           padding: 5px;
           text-align: justify;
           height: auto;
@@ -204,10 +214,12 @@
       .articleTitle {
         width: 100%;
         font-size: 3.85rem;
+        text-align: left;
       }
       .description {
         width: 100%;
         font-size: 1.8rem;
+        text-align: left;
       }
       .homeHeaderBtn {
         font-size: 1.1rem;
@@ -234,6 +246,7 @@
           top: 0;
           left: 0;
           font-family: var(--poppins-font);
+          font-size: 1rem;
           padding: 5px;
           text-align: justify;
           height: auto;

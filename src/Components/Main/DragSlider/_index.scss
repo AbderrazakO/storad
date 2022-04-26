@@ -1,0 +1,109 @@
+.slider {
+  margin-top: 80px;
+  width: 100%;
+  padding: 0 1rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  //
+  .sliderHeader {
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--poppins-font);
+    color: var(--text-color-1);
+
+    .sliderTitle {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+    .sliderMore {
+      font-weight: 400;
+      font-size: 1rem;
+      cursor: pointer;
+      color: var(--text-color-1);
+    }
+  }
+
+  //
+  .sliderContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 260px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    //
+    .sliderWrapper {
+      height: auto;
+      position: relative;
+      left: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      transition: 0 ease-in;
+      padding: 10px;
+    }
+
+    .sliderLeftBtn,
+    .sliderRightBtn {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      min-width: 50px;
+      min-height: 50px;
+      width: 50px;
+      height: 50px;
+      z-index: 99;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: var(--shadow-primary);
+      cursor: pointer;
+      svg {
+        width: 30px;
+        height: 30px;
+        fill: #333;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+      &:active {
+        box-shadow: none;
+      }
+    }
+
+    .sliderLeftBtn {
+      position: absolute;
+      left: 0;
+      margin-left: 1px;
+    }
+
+    .sliderRightBtn {
+      position: absolute;
+      right: 0;
+      margin-right: 1px;
+    }
+  }
+
+  //
+}
+
+@media screen and (min-width: 1024px) {
+  .slider {
+    padding: 0;
+  }
+}

@@ -5,7 +5,7 @@
 @import '../Components/Header/Logo/index';
 @import '../Components/Header/Navigator/index';
 @import '../Components/Header/ButtonNav/index';
-// @import '../Components/Header/ResponsiveNavBar/index';
+@import '../Components/Header/ButtonNav/ShopButton/index';
 
 // Home
 main {
@@ -18,3 +18,12 @@ main {
 }
 //
 @import '../Components/Main/HomeHeader/index';
+@import '../Components/Main/RoundedTable/index';
+@import '../Components/Main/Card/index';
+@import '../Components/Main/DragSlider/index';
+
+// Footer
+@import '../Layouts/Footer/index';
+// @import '../Components/Root/SocialMedia/index';
+@import '../Components/Header/ButtonNav/SearchBox/index';
+@import '../Components/Header/ButtonNav/DarkModeBtn/index';

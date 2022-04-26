@@ -33,6 +33,7 @@
     display: grid;
     place-items: center;
     animation: rot 9s linear infinite;
+    // overflow: hidden;
     .mainTable {
       width: 200px;
       height: 200px;
@@ -48,6 +49,8 @@
     .plateContainer {
       position: absolute;
       background-color: aqua;
+      border-radius: 50%;
+
       width: 600px;
       height: 600px;
       display: flex;

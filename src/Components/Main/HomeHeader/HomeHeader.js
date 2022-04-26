@@ -18,7 +18,7 @@ const HomeHeader = () => {
         </Link>
       </article>
       <article className='presentationSection'>
-        <img srcset={img} className='mainImg' alt='Presentation image' />
+        <img srcSet={img} className='mainImg' alt='Presentation image' />
         <div className='cards'>
           <div className='presCard'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
