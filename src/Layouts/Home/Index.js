@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import Header from '../../Components/Main/HomeHeader/HomeHeader'
 import Card from '../../Components/Main/Card/Index'
 import Slider from '../../Components/Main/DragSlider/Index'
-import Louz from './00.png'
+import LoremN from './00.png'
 import { trackProducts } from '../../Assets/data/store'
 
 const Index = () => {
@@ -28,7 +28,8 @@ const Index = () => {
               title={category}
               cards={element.map((e) => {
                 const { id, name, imgSrc, price, weight } = e
-                return <Card key={id} imgSrc={Louz} name={name} />
+
+                return <Card key={id} imgSrc={imgSrc} name={name} />
               })}
             />
           )
