@@ -4,7 +4,9 @@ const Index = ({ imgSrc, name = 'Untitled' }) => {
   return (
     <div className='productCard'>
       <div className='cardFront'>
-        <img srcSet={imgSrc} alt={`${name} picture`} />
+        <div className='productImg'>
+          <img srcSet={imgSrc} alt={`${name} picture`} />
+        </div>
         <div className='productName'>{name}</div>
       </div>
       <div className='cardBack'>
