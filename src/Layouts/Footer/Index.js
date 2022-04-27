@@ -1,6 +1,6 @@
-import Logo from '../../Components/Header/Logo/Index'
-import Media from '../../Components/Header/ButtonNav/SocialMedia/SocialMedia'
-import Search from '../../Components/Header/ButtonNav/SearchBox/SearchBox'
+import Logo from '../../Components/Footer/Logo/Index'
+import Media from '../../Components/Footer/SocialMedia/SocialMedia'
+import Search from '../../Components/Footer/SearchBox/SearchBox'
 
 const Index = () => {
   return (

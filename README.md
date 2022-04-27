@@ -11,6 +11,7 @@ Technologies used :
 - Sass
 - React Router
 - RXJS
+  npm i bootswatch uuid rxjs
 
 ## Setup
 
@@ -44,3 +45,8 @@ npm start
 - <a href="https://fonts.google.com/specimen/Righteous?category=Serif,Display,Handwriting,Monospace">Righteous</a>
 - <a href="https://fonts.google.com/specimen/Dongle?query=dongl">Dongle</a>
 - <a href="https://fonts.google.com/specimen/Poppins?query=poppin">Poppins</a>
+
+API :
+
+- https://developers.google.com/shopping-content/guides/products/products-api
+- Bigcommerce API
