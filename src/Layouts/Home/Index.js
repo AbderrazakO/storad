@@ -29,7 +29,9 @@ const Index = () => {
               cards={element.map((e) => {
                 const { id, name, imgSrc, price, weight } = e
 
-                return <Card key={id} imgSrc={imgSrc} name={name} />
+                return (
+                  <Card key={id} imgSrc={imgSrc} name={name} price={price} />
+                )
               })}
             />
           )
