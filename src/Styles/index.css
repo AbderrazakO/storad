@@ -1240,6 +1240,55 @@ footer {
   background-color: var(--background-color-2);
   -webkit-box-shadow: var(--shadow-3);
           box-shadow: var(--shadow-3);
+  font-family: var(--poppins-font);
+  color: var(--text-color-1);
+}
+
+.socialMedia {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.socialMedia a {
+  margin: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--background-color);
+  -webkit-box-shadow: var(--shadow-3);
+          box-shadow: var(--shadow-3);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.socialMedia a svg {
+  fill: var(--text-color-1);
+  width: 25px;
+  height: 25px;
+}
+
+.socialMedia a:hover {
+  background-color: var(--text-color-1);
+}
+
+.socialMedia a:hover svg {
+  fill: var(--background-color);
 }
 
 @-webkit-keyframes showBox {
@@ -1266,6 +1315,9 @@ footer {
 
 .searchBox {
   height: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   -webkit-box-shadow: var(--shadow-3);
           box-shadow: var(--shadow-3);
   background-color: var(--background-color-2);
@@ -1319,87 +1371,11 @@ footer {
   font-family: var(--poppins-font);
   color: var(--text-color-1);
   font-size: 1rem;
-  -webkit-animation: showBox 0.6s cubic-bezier(0.7, 0.38, 0, 0.96);
-          animation: showBox 0.6s cubic-bezier(0.7, 0.38, 0, 0.96);
+  -webkit-animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
+          animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
 }
 
 .searchBox .searchAria:focus {
-  display: block;
-  width: 200px;
-}
-
-@keyframes showBox {
-  from {
-    width: 0;
-    display: none;
-  }
-  to {
-    width: 200px;
-    display: block;
-  }
-}
-
-footer .searchBox {
-  height: 40px;
-  width: auto;
-  -webkit-box-shadow: var(--shadow-3);
-          box-shadow: var(--shadow-3);
-  background-color: var(--background-color-2);
-  border-radius: 50px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer .searchBox:hover > .searchAria {
-  width: 200px;
-  display: block;
-}
-
-footer .searchBox .searchBtn {
-  height: 40px;
-  width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer .searchBox .searchBtn svg {
-  fill: var(--text-color-1);
-  width: 20px;
-  height: 20px;
-}
-
-footer .searchBox .searchAria {
-  height: 35px;
-  width: 0;
-  display: none;
-  padding: 0 1rem;
-  font-family: var(--poppins-font);
-  color: var(--text-color-1);
-  font-size: 1rem;
-  -webkit-animation: showBox 0.6s cubic-bezier(0.7, 0.38, 0, 0.96);
-          animation: showBox 0.6s cubic-bezier(0.7, 0.38, 0, 0.96);
-}
-
-footer .searchBox .searchAria:focus {
   display: block;
   width: 200px;
 }

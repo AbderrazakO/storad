@@ -1,5 +1,5 @@
 import Logo from '../../Components/Footer/Logo/Index'
-import Media from '../../Components/Footer/SocialMedia/SocialMedia'
+import Media from '../../Components/Footer/SocialMedia/Index'
 import Search from '../../Components/Footer/SearchBox/SearchBox'
 
 const Index = () => {
