@@ -134,6 +134,7 @@ const Index = ({ title = 'Untitled', cards, heightPerc = 120 }) => {
           onClick={() => {
             dragWithButton('left')
           }}
+          aria-label='Go Left'
         >
           <LeftArrowIcon />
         </button>
@@ -151,6 +152,7 @@ const Index = ({ title = 'Untitled', cards, heightPerc = 120 }) => {
           onClick={() => {
             dragWithButton('right')
           }}
+          aria-label='Go Right'
         >
           <RightArrowIcon />
         </button>

@@ -75,22 +75,24 @@
         top: 0;
         left: 0;
         font-family: var(--poppins-font);
-        font-size: 0.7rem;
+        color: #fff;
+        font-size: 14px;
         padding: 5px;
         text-align: justify;
         height: auto;
         min-height: 50px;
         width: auto;
         max-width: 45%;
+        font-weight: 500;
 
         &:nth-child(1) {
-          background-color: #cdf008;
+          background-color: #fa7c3f;
           border-radius: 10px 10px 0 10px;
           top: 15%;
           left: 4%;
         }
         &:nth-child(2) {
-          background-color: #046630;
+          background-color: #457b9d;
           border-radius: 10px 10px 10px 0;
           top: 5%;
           left: 52%;
@@ -102,7 +104,7 @@
           left: 4%;
         }
         &:nth-child(4) {
-          background-color: #95e639;
+          background-color: #495057;
           border-radius: 0 10px 10px 10px;
           top: 20%;
           left: 52%;

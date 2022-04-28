@@ -1,5 +1,4 @@
 import { BehaviorSubject } from 'rxjs'
-import LoremN from '../images/00.png'
 
 const products = [
   {

@@ -22,6 +22,7 @@ const Index = () => {
       onClick={() => {
         switchTheme()
       }}
+      aria-label='Dark Mode'
     >
       <DarkModeIcon />
     </button>

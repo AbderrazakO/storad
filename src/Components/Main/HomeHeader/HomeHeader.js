@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import img from '../../../Assets/images/products/00.png'
+import img from '../../../Assets/images/05.webp'
 
 const HomeHeader = () => {
   return (
@@ -18,7 +18,13 @@ const HomeHeader = () => {
         </Link>
       </article>
       <article className='presentationSection'>
-        <img srcSet={img} className='mainImg' alt='Presentation image' />
+        <img
+          srcSet={img}
+          className='mainImg'
+          alt='Presentation image'
+          width={400}
+          height='250'
+        />
         <div className='cards'>
           <div className='presCard'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,

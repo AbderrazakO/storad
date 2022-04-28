@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import Header from '../../Components/Main/HomeHeader/HomeHeader'
 import Card from '../../Components/Main/Card/Index'
 import Slider from '../../Components/Main/DragSlider/Index'
-import LoremN from './00.png'
 import { trackProducts } from '../../Assets/data/store'
 
 const Index = () => {
