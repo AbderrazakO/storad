@@ -10,6 +10,6 @@ export const addToBag = (product) => {
 }
 
 export const removeFromBag = (id) => {
-  bag.filter((product) => product.id !== id)
+  bag = bag.filter((product) => product.id !== id)
   trackBag.next(bag)
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { MinusIcon, ShopIcon, CloseIcon, PlusIcon } from './icon'
+import { ShopIcon, CloseIcon } from './icon'
 import { trackBag, removeFromBag, addToBag } from '../../../Assets/data/bag'
 
 const ShopButton = () => {
@@ -21,13 +21,13 @@ const ShopButton = () => {
           setBagDisplay('flex')
         }}
       >
+        {newBag.length ? (
+          <div className='notificationIcon'>{newBag.length}</div>
+        ) : (
+          <></>
+        )}
         <ShopIcon />
       </div>
-      {newBag.length ? (
-        <div className='notificationIcon'>{newBag.length}</div>
-      ) : (
-        <></>
-      )}
 
       <div className='bagContainer' style={{ display: bagDisplay }}>
         <div className='bagWrapper'>
@@ -45,13 +45,34 @@ const ShopButton = () => {
           <div className='bagMain'>
             {newBag ? (
               newBag.map((e) => {
-                const { id, name, imgSrc } = e
+                const { id, name, imgSrc, price } = e
                 return (
                   <div key={id} className='bagCard'>
                     <div className='cardImg'>
                       <img alt={`${name} image`} srcSet={imgSrc} />
                     </div>
-                    {name}
+                    <div className='productDetails'>
+                      <div className='pRow'>
+                        <div className='productName'>{name}</div>
+                        <span className='productPrice'>{`${price}$`}</span>
+                      </div>
+                      <div className='pRow'>
+                        <div className='box'>
+                          <div className='cardBtn plusBtn'>+</div>
+                          <div className='productQuantity'>2</div>
+                          <div className='cardBtn minusBtn'>-</div>
+                        </div>
+                        <button
+                          className='cardBtn'
+                          onClick={() => {
+                            console.log(id)
+                            removeFromBag(id)
+                          }}
+                        >
+                          remove
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 )
               })

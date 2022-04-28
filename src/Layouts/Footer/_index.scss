@@ -1,10 +1,139 @@
 footer {
-  height: 400px;
+  // height: 400px;
   width: 100%;
   margin-top: 4rem;
-  padding: 3rem 2.5rem;
+  padding: 2rem 2.5rem 0.25rem 2.5rem;
   background-color: var(--background-color-2);
   box-shadow: var(--shadow-3);
   font-family: var(--poppins-font);
   color: var(--text-color-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  .footerRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    &:last-child {
+      text-align: center;
+      border-top: 1px solid var(--text-color-1);
+      padding-top: 0.25rem;
+      margin-top: 1.75rem;
+    }
+    .footerCol {
+      width: 100%;
+      gap: 10px;
+      &:first-child {
+        .brandLogo {
+          font-size: 2.5rem;
+        }
+        .brandDescription {
+          text-align: justify;
+        }
+      }
+      &:nth-child(2) {
+        display: none;
+      }
+      &:nth-child(3) {
+        display: flex;
+        flex-direction: column;
+        gap: 0.15rem;
+        .footerTitle {
+          font-weight: 700;
+          text-align: center;
+          font-size: 1.5rem;
+          color: var(--text-color-1);
+        }
+        .footerLink {
+          display: none;
+        }
+        .socialMedia {
+          width: 100%;
+        }
+      }
+      &:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        .searchBox {
+          display: none;
+        }
+        .footerTitle {
+          font-weight: 700;
+          text-align: center;
+          font-size: 1.5rem;
+          color: var(--text-color-1);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  footer {
+    height: 350px;
+    .footerRow {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .footerCol {
+        // width: calc(100% / 4);
+        gap: 10px;
+        &:first-child {
+          width: 30%;
+          .brandLogo {
+            font-size: 3rem;
+          }
+          .brandDescription {
+            text-align: justify;
+          }
+        }
+        &:nth-child(2) {
+          width: 20%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.15rem;
+        }
+        &:nth-child(3) {
+          width: 20%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.15rem;
+          .footerTitle {
+            font-weight: 700;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-color-1);
+          }
+          .footerLink {
+            display: none;
+          }
+          .socialMedia {
+            width: 100%;
+          }
+        }
+        &:last-child {
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+          .searchBox {
+            display: none;
+          }
+          .footerTitle {
+            font-weight: 700;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--text-color-1);
+          }
+        }
+      }
+    }
+  }
 }

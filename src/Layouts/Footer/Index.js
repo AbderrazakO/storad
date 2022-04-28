@@ -6,11 +6,48 @@ import Payement from '../../Components/Footer/Payement/Index'
 const Index = () => {
   return (
     <footer>
-      <Logo />
-      <Media />
-      <Search />
-      <Payement />
-      <div>©2022, Abderrazaq Oussi, All rights reserved</div>
+      <div className='footerRow'>
+        <div className='footerCol'>
+          <Logo />
+          <div className='brandDescription'>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            natus illum soluta iure, earum voluptate at molestias iusto. Nam,
+            beatae?
+          </div>
+        </div>
+        <div className='footerCol'>
+          <h1 className='footerTitle'>Shop</h1>
+          <a href=''>Nuts</a>
+          <a href=''>Leaf</a>
+          <a href=''>Lorem0</a>
+          <a href=''>Lorem1</a>
+          <a href=''>Lorem3</a>
+        </div>
+        <div className='footerCol'>
+          <h1 className='footerTitle'>Social</h1>
+          <Media />
+          <a href='' className='footerLink'>
+            Facebook
+          </a>
+          <a href='' className='footerLink'>
+            Whatsapp
+          </a>
+          <a href='' className='footerLink'>
+            Instagram
+          </a>
+          <a href='' className='footerLink'>
+            Discord
+          </a>
+        </div>
+        <div className='footerCol'>
+          <Search />
+          <div className='footerTitle'>Payement</div>
+          <Payement />
+        </div>
+      </div>
+      <div className='footerRow'>
+        <div>©2022, Abderrazaq Oussi, All rights reserved</div>
+      </div>
     </footer>
   )
 }
