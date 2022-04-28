@@ -366,11 +366,11 @@ header #showNav:checked ~ .handleNavigator {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--background-color-2);
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  -webkit-box-shadow: var(--shadow-3);
-          box-shadow: var(--shadow-3);
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   cursor: pointer;
 }
 
@@ -378,6 +378,23 @@ header #showNav:checked ~ .handleNavigator {
   fill: var(--text-color-1);
   width: 20px;
   height: 20px;
+}
+
+.popUpContainer .notificationIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: salmon;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  font-family: var(--poppins-font);
+  color: #fff;
+  font-weight: 500;
 }
 
 .popUpContainer .bagContainer {
@@ -391,12 +408,12 @@ header #showNav:checked ~ .handleNavigator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .popUpContainer .bagContainer .bagWrapper {
@@ -413,14 +430,14 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #fff;
+  background-color: var(--background-color);
   padding: 1rem;
-  width: 85%;
-  height: 80%;
+  width: 100%;
+  height: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  border-radius: 10px;
-  font-family: var(--font-poppins);
+  font-family: var(--poppins-font);
+  color: var(--text-color-1);
   -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
@@ -448,26 +465,21 @@ header #showNav:checked ~ .handleNavigator {
 }
 
 .popUpContainer .bagContainer .bagWrapper .bagHeader .closeBtn {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   opacity: 0.8;
-  background-color: #c0c0be;
+  background-color: var(--background-color-2);
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 .popUpContainer .bagContainer .bagWrapper .bagHeader .closeBtn svg {
-  width: 25px;
-  height: 25px;
+  fill: var(--text-color-1);
+  width: 20px;
+  height: 20px;
 }
 
 .popUpContainer .bagContainer .bagWrapper .bagHeader .closeBtn:hover {
@@ -484,6 +496,24 @@ header #showNav:checked ~ .handleNavigator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  overflow-y: scroll;
+}
+
+.popUpContainer .bagContainer .bagWrapper .bagMain .bagCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -494,6 +524,31 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background-color: var(--background-color-2);
+}
+
+.popUpContainer .bagContainer .bagWrapper .bagMain .bagCard .cardImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.popUpContainer .bagContainer .bagWrapper .bagMain .bagCard .cardImg img {
+  width: 100%;
+  height: 100%;
+}
+
+.popUpContainer .bagContainer .bagWrapper .bagFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (min-width: 920px) {
+  .popUpContainer .bagContainer .bagWrapper {
+    width: 40%;
+  }
 }
 
 main {

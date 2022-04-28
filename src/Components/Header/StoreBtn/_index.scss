@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--background-color-2);
     width: 35px;
     height: 35px;
     border-radius: 50%;
@@ -15,12 +15,26 @@
     cursor: pointer;
 
     svg {
-      fill: #10031b;
+      fill: var(--text-color-1);
       width: 20px;
       height: 20px;
-      // width: 25px;
-      // height: 25px;
     }
+  }
+
+  .notificationIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: salmon;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+    font-family: var(--poppins-font);
+    color: #fff;
+    font-weight: 500;
   }
 
   .bagContainer {
@@ -32,20 +46,20 @@
     z-index: 999;
     background: rgba(0, 0, 0, 0.7);
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-end;
     .bagWrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      background-color: #fff;
+      background-color: var(--background-color);
       padding: 1rem;
-      width: 85%;
-      height: 80%;
+      width: 100%;
+      height: 100%;
       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-      border-radius: 10px;
-      font-family: var(--font-poppins);
+      font-family: var(--poppins-font);
+      color: var(--text-color-1);
       transition: all 0.8s ease;
       .bagHeader {
         width: 100%;
@@ -58,18 +72,18 @@
           font-weight: 600;
         }
         .closeBtn {
-          width: 30px;
-          height: 30px;
+          width: 35px;
+          height: 35px;
           border-radius: 50%;
           opacity: 0.8;
-          background-color: #c0c0be;
+          background-color: var(--background-color-2);
           cursor: pointer;
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          display: grid;
+          place-items: center;
           svg {
-            width: 25px;
-            height: 25px;
+            fill: var(--text-color-1);
+            width: 20px;
+            height: 20px;
           }
           &:hover {
             opacity: 1;
@@ -83,9 +97,42 @@
         flex-grow: 1;
         margin: 1rem 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 10px;
+        overflow-y: scroll;
+        .bagCard {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--background-color-2);
+          .cardImg {
+            width: 120px;
+            height: 120px;
+            border-radius: 10px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+
+      .bagFooter {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 920px) {
+  .popUpContainer {
+    .bagContainer {
+      .bagWrapper {
+        width: 40%;
       }
     }
   }

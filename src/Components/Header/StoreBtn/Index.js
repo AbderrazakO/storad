@@ -23,11 +23,16 @@ const ShopButton = () => {
       >
         <ShopIcon />
       </div>
+      {newBag.length ? (
+        <div className='notificationIcon'>{newBag.length}</div>
+      ) : (
+        <></>
+      )}
 
       <div className='bagContainer' style={{ display: bagDisplay }}>
         <div className='bagWrapper'>
           <div className='bagHeader'>
-            <div className='bagTitle'>Untitled</div>
+            <div className='bagTitle'>Your Bag</div>
             <div
               className='closeBtn'
               onClick={() => {
@@ -42,15 +47,23 @@ const ShopButton = () => {
               newBag.map((e) => {
                 const { id, name, imgSrc } = e
                 return (
-                  <div key={id}>
+                  <div key={id} className='bagCard'>
+                    <div className='cardImg'>
+                      <img alt={`${name} image`} srcSet={imgSrc} />
+                    </div>
                     {name}
-                    <img alt='' srcSet={imgSrc} />
                   </div>
                 )
               })
             ) : (
               <></>
             )}
+          </div>
+          <div className='bagFooter'>
+            <div>
+              Total <span>32$</span>
+            </div>
+            <button className='bagBtn'>Checkout</button>
           </div>
         </div>
       </div>
