@@ -1,0 +1,158 @@
+.categoriesSection {
+  width: 100%;
+  height: max-content;
+  padding: 2rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .sectionTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: var(--dongle-font);
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color-1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    .partOne {
+      width: max-content;
+      height: max-content;
+      padding: 0.25rem 1rem;
+      color: #fff;
+      background-image: url("data:image/svg+xml,%3C!--%3Fxml version='1.0' standalone='no'%3F--%3E%3Csvg id='sw-js-blob-svg' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='sw-gradient' x1='0' x2='1' y1='1' y2='0'%3E%3Cstop id='stop1' stop-color='rgba(248, 117, 55, 1)' offset='0%25'%3E%3C/stop%3E%3Cstop id='stop2' stop-color='rgba(251, 168, 31, 1)' offset='100%25'%3E%3C/stop%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23sw-gradient)' d='M22,-34.4C28.7,-30,34.3,-24.1,38,-17.1C41.7,-10,43.4,-1.8,42.3,6.1C41.2,14,37.3,21.4,31.2,25.3C25.2,29.3,17,29.6,10,29.7C3,29.8,-2.8,29.7,-8.9,28.6C-14.9,27.6,-21.2,25.7,-28,22C-34.8,18.2,-42,12.7,-44.4,5.5C-46.8,-1.7,-44.4,-10.4,-38.8,-15.8C-33.3,-21.1,-24.7,-23.1,-17.7,-27.3C-10.7,-31.6,-5.4,-38.2,1.2,-40C7.7,-41.8,15.4,-38.9,22,-34.4Z' width='100%25' height='100%25' transform='translate(50 50)' stroke-width='0' style='transition: all 0.3s ease 0s;'%3E%3C/path%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .categoriesMain {
+    width: 95%;
+    height: 500px;
+    gap: 5px;
+    display: grid;
+    grid-template-columns: calc(100% / 2) calc(100% / 2);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 'Ar1 Ar2' 'Ar1 Ar3' 'Ar4 Ar4';
+    .categoriesCard {
+      overflow: hidden;
+      background-color: aqua;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      box-shadow: var(--shadow-1);
+      position: relative;
+
+      .cardBtn {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%);
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        width: max-content;
+        height: max-content;
+        padding: 0.5rem 0.75rem;
+        background-color: var(--main-color);
+        font-family: var(--poppins-font);
+        color: var(--text-color-1);
+        box-shadow: var(--shadow-4);
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      &:first-child {
+        grid-area: Ar2;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      &:nth-child(2) {
+        grid-area: Ar1;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      &:nth-child(3) {
+        grid-area: Ar3;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      &:nth-child(4) {
+        grid-area: Ar4;
+        display: none;
+        img {
+          height: 100%;
+          width: auto;
+        }
+      }
+      &:nth-child(5) {
+        grid-area: Ar5;
+        display: none;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      &:last-child {
+        grid-area: Ar4;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .categoriesSection {
+    padding: 3rem 0.5rem;
+    .categoriesMain {
+      width: 85%;
+      height: 500px;
+      gap: 12px;
+      display: grid;
+      grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(
+          100% / 4
+        );
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 'Ar1 Ar2 Ar3 Ar4' 'Ar5 Ar2 Ar6 Ar6';
+      .categoriesCard {
+        overflow: hidden;
+
+        &:first-child {
+          grid-area: Ar1;
+        }
+        &:nth-child(2) {
+          grid-area: Ar2;
+        }
+        &:nth-child(3) {
+          grid-area: Ar3;
+        }
+        &:nth-child(4) {
+          grid-area: Ar4;
+          display: block;
+        }
+        &:nth-child(5) {
+          grid-area: Ar5;
+          display: block;
+        }
+        &:last-child {
+          grid-area: Ar6;
+        }
+      }
+    }
+  }
+}
