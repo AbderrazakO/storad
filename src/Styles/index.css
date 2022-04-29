@@ -1464,7 +1464,19 @@ footer .footerRow .footerCol:last-child .footerTitle {
     gap: 10px;
   }
   footer .footerRow .footerCol:first-child {
-    width: 30%;
+    width: 40%;
+    height: 100%;
+    padding-right: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   footer .footerRow .footerCol:first-child .brandLogo {
     font-size: 3rem;
@@ -1472,8 +1484,10 @@ footer .footerRow .footerCol:last-child .footerTitle {
   footer .footerRow .footerCol:first-child .brandDescription {
     text-align: justify;
   }
-  footer .footerRow .footerCol:nth-child(2) {
-    width: 20%;
+  footer .footerRow .footerCol:nth-child(2), footer .footerRow .footerCol:nth-child(3) {
+    padding-top: 1rem;
+    width: 15%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1481,30 +1495,29 @@ footer .footerRow .footerCol:last-child .footerTitle {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 0.15rem;
   }
-  footer .footerRow .footerCol:nth-child(3) {
-    width: 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 0.15rem;
-  }
-  footer .footerRow .footerCol:nth-child(3) .footerTitle {
-    font-weight: 700;
-    text-align: center;
-    font-size: 1.5rem;
+  footer .footerRow .footerCol:nth-child(2) .footerTitle, footer .footerRow .footerCol:nth-child(3) .footerTitle {
+    font-weight: 500;
+    text-align: left;
+    font-size: 1.25rem;
     color: var(--text-color-1);
   }
-  footer .footerRow .footerCol:nth-child(3) .footerLink {
-    display: none;
+  footer .footerRow .footerCol:nth-child(2) .footerLink, footer .footerRow .footerCol:nth-child(3) .footerLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1rem;
+    color: var(--text-color-1);
   }
-  footer .footerRow .footerCol:nth-child(3) .socialMedia {
-    width: 100%;
+  footer .footerRow .footerCol:nth-child(2) .socialMedia, footer .footerRow .footerCol:nth-child(3) .socialMedia {
+    display: none;
   }
   footer .footerRow .footerCol:last-child {
     width: 30%;
@@ -1515,10 +1528,25 @@ footer .footerRow .footerCol:last-child .footerTitle {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 0.75rem;
   }
   footer .footerRow .footerCol:last-child .searchBox {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: var(--background-color);
+  }
+  footer .footerRow .footerCol:last-child .searchBox .searchAria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 250px;
   }
   footer .footerRow .footerCol:last-child .footerTitle {
     font-weight: 700;

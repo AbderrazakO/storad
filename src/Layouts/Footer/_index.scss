@@ -86,7 +86,12 @@ footer {
         // width: calc(100% / 4);
         gap: 10px;
         &:first-child {
-          width: 30%;
+          width: 40%;
+          height: 100%;
+          padding-right: 4rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
           .brandLogo {
             font-size: 3rem;
           }
@@ -94,37 +99,46 @@ footer {
             text-align: justify;
           }
         }
-        &:nth-child(2) {
-          width: 20%;
-          display: flex;
-          flex-direction: column;
-          gap: 0.15rem;
-        }
+        &:nth-child(2),
         &:nth-child(3) {
-          width: 20%;
+          padding-top: 1rem;
+          width: 15%;
+          height: 100%;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
           gap: 0.15rem;
           .footerTitle {
-            font-weight: 700;
-            text-align: center;
-            font-size: 1.5rem;
+            font-weight: 500;
+            text-align: left;
+            font-size: 1.25rem;
             color: var(--text-color-1);
           }
           .footerLink {
-            display: none;
+            display: flex;
+            font-size: 1rem;
+            color: var(--text-color-1);
           }
           .socialMedia {
-            width: 100%;
+            display: none;
           }
         }
+
         &:last-child {
           width: 30%;
           display: flex;
           flex-direction: column;
+          align-items: center;
+          justify-content: center;
           gap: 0.75rem;
           .searchBox {
-            display: none;
+            display: flex;
+            background-color: var(--background-color);
+            .searchAria {
+              display: flex;
+              width: 250px;
+            }
           }
           .footerTitle {
             font-weight: 700;

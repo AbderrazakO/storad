@@ -17,11 +17,21 @@ const Index = () => {
         </div>
         <div className='footerCol'>
           <h1 className='footerTitle'>Shop</h1>
-          <a href=''>Nuts</a>
-          <a href=''>Leaf</a>
-          <a href=''>Lorem0</a>
-          <a href=''>Lorem1</a>
-          <a href=''>Lorem3</a>
+          <a href='' className='footerLink'>
+            Nuts
+          </a>
+          <a href='' className='footerLink'>
+            Leaf
+          </a>
+          <a href='' className='footerLink'>
+            Lorem0
+          </a>
+          <a href='' className='footerLink'>
+            Lorem1
+          </a>
+          <a href='' className='footerLink'>
+            Lorem3
+          </a>
         </div>
         <div className='footerCol'>
           <h1 className='footerTitle'>Social</h1>
