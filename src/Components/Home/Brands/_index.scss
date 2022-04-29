@@ -1,0 +1,42 @@
+.brandSection {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #fa8072;
+  gap: 20px;
+  svg {
+    width: 80px;
+    height: 80px;
+    fill: var(--text-color-1);
+    &:first-child {
+      width: 70px;
+      height: 70px;
+    }
+    &:last-child {
+      width: 90px;
+      height: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .brandSection {
+    justify-content: space-evenly;
+    svg {
+      width: 90px;
+      height: 90px;
+      fill: var(--text-color-1);
+      &:first-child {
+        width: 80px;
+        height: 80px;
+      }
+      &:last-child {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}

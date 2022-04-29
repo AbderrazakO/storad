@@ -4,6 +4,10 @@ import Card from '../../Components/Main/Card/Index'
 import Slider from '../../Components/Main/DragSlider/Index'
 import { trackProducts } from '../../Assets/data/store'
 
+//
+import Brands from '../../Components/Home/Brands/Index'
+import Categories from '../../Components/Home/Categories/Index'
+
 const Index = () => {
   const [products, setProducts] = useState([])
 
@@ -16,6 +20,8 @@ const Index = () => {
   //
   return (
     <main>
+      <Brands />
+      <Categories />
       <Header />
       {products ? (
         products.map((slide) => {
@@ -38,6 +44,7 @@ const Index = () => {
       ) : (
         <></>
       )}
+      {/* <Brands /> */}
     </main>
   )
 }

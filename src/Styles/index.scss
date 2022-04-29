@@ -8,14 +8,8 @@
 @import '../Components/Header/StoreBtn/index';
 
 // Home
-main {
-  width: 100%;
-}
-@media screen and (min-width: 1024px) {
-  main {
-    width: 90vw;
-  }
-}
+@import '../Components/Home/Brands/index';
+@import '../Components/Home/Categories/index';
 //
 @import '../Components/Main/HomeHeader/index';
 @import '../Components/Main/RoundedTable/index';

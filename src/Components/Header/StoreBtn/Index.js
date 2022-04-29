@@ -52,9 +52,9 @@ const ShopButton = () => {
                       <img alt={`${name} image`} srcSet={imgSrc} />
                     </div>
                     <div className='productDetails'>
-                      <div className='pRow'>
-                        <div className='productName'>{name}</div>
-                        <span className='productPrice'>{`${price}$`}</span>
+                      <div className='pRow productName'>{name}</div>
+                      <div className='pRow productPrice'>
+                        {price} <span>$</span>
                       </div>
                       <div className='pRow'>
                         <div className='box'>
@@ -81,8 +81,9 @@ const ShopButton = () => {
             )}
           </div>
           <div className='bagFooter'>
-            <div>
-              Total <span>32$</span>
+            <div className='bagFrow'>
+              <div className='rowTitle'>Total :</div>
+              <div className='rowValue'>{`$ 32 `}</div>
             </div>
             <button className='bagBtn'>Checkout</button>
           </div>
