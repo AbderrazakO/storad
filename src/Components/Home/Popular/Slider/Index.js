@@ -2,7 +2,12 @@ import { useState, useRef, useEffect } from 'react'
 import { LeftArrowIcon, RightArrowIcon } from './Icons'
 import { Link } from 'react-router-dom'
 
-const Index = ({ title = 'Untitled', cards, heightPerc = 120 }) => {
+const Index = ({
+  title1 = 'Untitled',
+  title2 = 'Untitled',
+  cards,
+  heightPerc = 120,
+}) => {
   const [isDown, setIsDown] = useState(false) // Mouse Down Status
   const sliderWrapper = useRef(null) // Get Wrapper Div
   const startX = useRef(0) // Get Mouse Down Position
@@ -124,10 +129,7 @@ const Index = ({ title = 'Untitled', cards, heightPerc = 120 }) => {
     <div className='slider'>
       <div className='sliderHeader'>
         <div className='sliderTitle'>
-          <span className='titleBg'>
-            <span className='text'>Popular</span>
-          </span>
-          {title}
+          {title1} <span> {title2}</span>
         </div>
         <div className='sliderMore'>
           <button

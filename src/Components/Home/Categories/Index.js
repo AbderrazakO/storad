@@ -9,10 +9,7 @@ const Index = () => {
   return (
     <div className='categoriesSection'>
       <div className='sectionTitle'>
-        <span className='titleBg'>
-          <span className='text'>Popular</span>
-        </span>
-        Categories
+        Popular <span> Categories</span>
       </div>
       <div className='categoriesMain'>
         <div className='categoriesCard'>

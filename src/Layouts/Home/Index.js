@@ -88,10 +88,22 @@ const Index = () => {
       <Header />
       <About />
       <Categories />
+      {
+        <Slid
+          title1='Popular'
+          title2='Products'
+          cards={popularProducts.map((e) => {
+            const { id, name, imgSrc, price } = e
+
+            return <Card key={id} imgSrc={imgSrc} name={name} price={price} />
+          })}
+        />
+      }
       <Brands />
       {
         <Slid
-          title='Products'
+          title1='Products'
+          title2='On Sale'
           cards={popularProducts.map((e) => {
             const { id, name, imgSrc, price } = e
 
