@@ -1,11 +1,6 @@
 import { useEffect, useState } from 'react'
-import Header from '../../Components/Main/HomeHeader/HomeHeader'
-// import Card from '../../Components/Main/Card/Index'
-// import Slider from '../../Components/Main/DragSlider/Index'
 import { trackProducts } from '../../Assets/data/store'
-
-//
-// import Header from '../../Components/Home/Header/Index'
+import Header from '../../Components/Home/Header/Index'
 import Categories from '../../Components/Home/Categories/Index'
 // import About from '../../Components/Home/AboutUs/Index'
 import Brands from '../../Components/Home/Brands/Index'
