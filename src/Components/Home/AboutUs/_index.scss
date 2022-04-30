@@ -1,0 +1,88 @@
+.aboutSection {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  place-items: center;
+  font-family: var(--poppins-font);
+  color: var(--text-color-1);
+  padding: 5rem 0;
+  gap: 60px;
+  .sectionTitle {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    span {
+      color: var(--main-color);
+    }
+  }
+
+  .storeDescription {
+    width: 90%;
+    font-size: 1.6rem;
+    font-family: var(--poppins-font);
+    text-align: center;
+  }
+  .cardBox {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    .card {
+      width: 175px;
+      height: max-content;
+      display: grid;
+      place-items: center;
+      color: var(--text-color-1);
+      font-family: var(--poppins-font);
+      .value {
+        font-size: 2rem;
+        font-weight: 600;
+        span {
+          color: var(--main-color);
+        }
+      }
+      .description {
+        font-size: 1rem;
+        font-weight: 400;
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .aboutSection {
+    gap: 70px;
+    .sectionTitle {
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .storeDescription {
+      width: 60%;
+      font-size: 1.8rem;
+      padding: 0 0.5rem;
+    }
+    .cardBox {
+      width: 100%;
+      height: max-content;
+
+      gap: 20px;
+      .card {
+        width: 200px;
+        height: max-content;
+        .value {
+          font-size: 2.2rem;
+        }
+        .description {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

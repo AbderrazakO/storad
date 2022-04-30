@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { trackProducts } from '../../Assets/data/store'
 import Header from '../../Components/Home/Header/Index'
 import Categories from '../../Components/Home/Categories/Index'
-// import About from '../../Components/Home/AboutUs/Index'
+import About from '../../Components/Home/AboutUs/Index'
 import Brands from '../../Components/Home/Brands/Index'
 import Slid from '../../Components/Home/Popular/Slider/Index'
 import Card from '../../Components/Home/Popular/Card/Index'
@@ -86,6 +86,7 @@ const Index = () => {
   return (
     <main>
       <Header />
+      <About />
       <Categories />
       <Brands />
       {
