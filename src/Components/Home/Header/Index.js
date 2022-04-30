@@ -12,8 +12,7 @@ const Index = () => {
           <span>With Pleasure</span>
         </h1>
         <p className='description'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
-          eos.
+          Our goal is to make you happy, Explore more great products with us .
         </p>
         <Link to='/shop' className='homeHeaderBtn'>
           Start Shopping
@@ -23,19 +22,10 @@ const Index = () => {
         <div className='mainImg'>
           <img srcSet={img} alt='Presentation image' width={400} height='250' />
         </div>
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium,
-          obcaecati!
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum.
-        </div>
-        <div className='presCard'>
-          Lorem ipsum dolor sit amet consectetur adipisicing.
-        </div>
+        <div className='presCard'>Price for everyone</div>
+        <div className='presCard'>Best package for best product</div>
+        <div className='presCard'>The quality is the best</div>
+        <div className='presCard'>Delivered as fast as possible</div>
       </article>
     </section>
   )

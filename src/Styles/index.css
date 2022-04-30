@@ -840,18 +840,21 @@ header #showNav:checked ~ .handleNavigator {
 }
 
 .homeHeader .presentationSection .presCard {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  max-width: 45%;
+  padding: 0.5rem 0.75rem;
   position: absolute;
   font-family: var(--poppins-font);
+  font-size: 1rem;
+  font-weight: 500;
   color: #fff;
   background-color: #fa7c3f;
-  font-size: 14px;
-  padding: 5px;
   text-align: justify;
-  height: auto;
-  min-height: 50px;
-  width: auto;
-  max-width: 45%;
-  font-weight: 500;
 }
 
 .homeHeader .presentationSection .presCard:nth-child(4) {
@@ -959,17 +962,6 @@ header #showNav:checked ~ .handleNavigator {
   }
   .homeHeader .presentationSection .presCard {
     position: absolute;
-    font-family: var(--poppins-font);
-    color: #fff;
-    background-color: #fa7c3f;
-    font-size: 14px;
-    padding: 5px;
-    text-align: justify;
-    height: auto;
-    min-height: 50px;
-    width: auto;
-    max-width: 45%;
-    font-weight: 500;
   }
   .homeHeader .presentationSection .presCard:nth-child(4) {
     background-color: #fa7c3f;
@@ -1286,6 +1278,41 @@ header #showNav:checked ~ .handleNavigator {
 @media screen and (min-width: 1024px) {
   .categoriesSection {
     padding: 3rem 0.5rem;
+  }
+  .categoriesSection .sectionTitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 10px;
+    font-family: var(--dongle-font);
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-color-1);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .categoriesSection .sectionTitle .partOne {
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    color: #fff;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .categoriesSection .sectionTitle .partTwo {
+    font-weight: 700;
   }
   .categoriesSection .categoriesMain {
     width: 85%;
