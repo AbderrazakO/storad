@@ -124,8 +124,10 @@ const Index = ({ title = 'Untitled', cards, heightPerc = 120 }) => {
     <div className='slider'>
       <div className='sliderHeader'>
         <div className='sliderTitle'>
-          <div className='partOne'>Popular</div>
-          <div className='partTwo'>Categories</div>
+          <span className='titleBg'>
+            <span className='text'>Popular</span>
+          </span>
+          {title}
         </div>
         <div className='sliderMore'>
           <button
