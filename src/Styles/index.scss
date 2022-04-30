@@ -10,11 +10,14 @@
 // Home
 @import '../Components/Home/Brands/index';
 @import '../Components/Home/Categories/index';
+@import '../Components/Home/Popular/Slider/index';
+@import '../Components/Home/Popular/Card/index';
+
 //
 @import '../Components/Main/HomeHeader/index';
 @import '../Components/Main/RoundedTable/index';
-@import '../Components/Main/Card/index';
-@import '../Components/Main/DragSlider/index';
+// @import '../Components/Main/Card/index';
+// @import '../Components/Main/DragSlider/index';
 
 // Footer
 @import '../Layouts/Footer/index';

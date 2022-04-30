@@ -1,9 +1,9 @@
-import I00 from '../../../Assets/images/categories/00.jpg'
-import I01 from '../../../Assets/images/categories/01.jpg'
-import I02 from '../../../Assets/images/categories/02.jpg'
-import I03 from '../../../Assets/images/categories/03.jpg'
-import I04 from '../../../Assets/images/categories/04.jpg'
-import I05 from '../../../Assets/images/categories/05.jpg'
+import I00 from '../../../Assets/images/categories/00.webp'
+import I01 from '../../../Assets/images/categories/01.webp'
+import I02 from '../../../Assets/images/categories/02.webp'
+import I03 from '../../../Assets/images/categories/03.webp'
+import I04 from '../../../Assets/images/categories/04.webp'
+import I05 from '../../../Assets/images/categories/05.webp'
 
 const Index = () => {
   return (
