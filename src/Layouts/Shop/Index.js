@@ -1,7 +1,12 @@
 import React from 'react'
+import Filter from '../../Components/Shop/Filter/Index'
 
 const Index = () => {
-  return <div>Shop Here</div>
+  return (
+    <main>
+      <Filter />
+    </main>
+  )
 }
 
 export default Index

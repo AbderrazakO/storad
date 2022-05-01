@@ -1695,6 +1695,411 @@ header #showNav:checked ~ .handleNavigator {
           justify-content: space-between;
 }
 
+@-webkit-keyframes showBox {
+  from {
+    width: 0;
+    display: none;
+  }
+  to {
+    width: 200px;
+    display: block;
+  }
+}
+
+@keyframes showBox {
+  from {
+    width: 0;
+    display: none;
+  }
+  to {
+    width: 200px;
+    display: block;
+  }
+}
+
+.searchBox {
+  height: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-box-shadow: var(--shadow-3);
+          box-shadow: var(--shadow-3);
+  background-color: var(--background-color-2);
+  border-radius: 50px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.searchBox:hover > .searchAria {
+  width: 200px;
+  display: block;
+}
+
+.searchBox .searchBtn {
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.searchBox .searchBtn svg {
+  fill: var(--text-color-1);
+  width: 20px;
+  height: 20px;
+}
+
+.searchBox .searchAria {
+  height: 35px;
+  width: 0;
+  display: none;
+  padding: 0 1rem;
+  font-family: var(--poppins-font);
+  color: var(--text-color-1);
+  font-size: 1rem;
+  -webkit-animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
+          animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
+}
+
+.searchBox .searchAria:focus {
+  display: block;
+  width: 200px;
+}
+
+.darkModeBtn {
+  height: 40px;
+  width: 40px;
+  -webkit-box-shadow: var(--shadow-3);
+          box-shadow: var(--shadow-3);
+  background-color: var(--background-color-2);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.darkModeBtn svg {
+  fill: var(--text-color-1);
+  width: 25px;
+  height: 25px;
+}
+
+.filterSection {
+  height: 800px;
+}
+
+.filterSection .filterMain {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.filterSection .filterFooter {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.5rem 0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+}
+
+.filterSection .filterFooter .filterBtn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.5rem 1.75rem;
+  background-color: var(--main-color);
+  color: #fff;
+  text-transform: uppercase;
+  font-family: var(--poppins-font);
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filterSection .filterFooter .filterBtn:hover {
+  opacity: 0.9;
+}
+
+.filterSection .filterFooter .filterIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  cursor: pointer;
+}
+
+.filterSection .filterFooter .filterIcon svg {
+  fill: var(--text-color-1);
+  width: 25px;
+  height: 25px;
+}
+
+@-webkit-keyframes MoveIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: -webkit-max-content;
+    height: max-content;
+  }
+}
+
+@keyframes MoveIn {
+  from {
+    height: 0;
+  }
+  to {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+}
+
+@-webkit-keyframes MoveOut {
+  from {
+    height: -webkit-max-content;
+    height: max-content;
+  }
+  to {
+    height: 0;
+  }
+}
+
+@keyframes MoveOut {
+  from {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+  to {
+    height: 0;
+  }
+}
+
+.dropDownBox {
+  margin: 0.25rem 0;
+  width: 270px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-top: 1px solid #f1faee;
+}
+
+.dropDownBox .dropBoxHeader {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+}
+
+.dropDownBox .dropBoxHeader .dropTitle {
+  font-family: var(--poppins-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color-1);
+}
+
+.dropDownBox .dropBoxHeader .dropIcon {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #f1faee;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.dropDownBox .dropWrapper {
+  width: calc(100% - 1.6rem);
+  height: 0;
+  max-height: 155px;
+  overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+}
+
+.dropDownBox .dropWrapper .dropRow {
+  width: 100%;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+}
+
+.dropDownBox .dropWrapper .dropRow .checkboxInput {
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  border: none;
+  background-color: #e7e5e5;
+  border-radius: 2px;
+  accent-color: var(--main-color);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropDownBox .dropWrapper .dropRow .checkboxInput:checked {
+  background-color: salmon;
+}
+
+.dropDownBox .dropWrapper .dropRow .checkboxInput:checked::after {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: 20%;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 6px;
+  height: 10px;
+  border-width: 0 2px 2px 0;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.dropDownBox .dropWrapper .dropRow .checkboxLabel {
+  width: 100%;
+  font-family: var(--poppins-font);
+  font-weight: 500;
+  color: #adb5bd;
+  cursor: pointer;
+}
+
+.dropDownBox .dropWrapper .dropRow .checkboxInput:checked ~ .checkboxLabel {
+  color: var(--text-color-1);
+}
+
+.dropDownBox .dropWrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.dropDownBox .dropWrapper::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #0000001a;
+}
+
+.dropDownBox .dropWrapper::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--main-color);
+}
+
+.dropDownBox .dropWrapper::-webkit-scrollbar-thumb:hover {
+  background: #ef233bc7;
+}
+
+.dropDownBox .dropWrapper::-webkit-scrollbar-thumb:active {
+  background: #d90427a8;
+}
+
 footer {
   width: 100%;
   margin-top: 4rem;
@@ -2002,118 +2407,5 @@ footer .footerRow .footerCol:last-child .footerTitle {
 .payementSection .payementMethod svg {
   width: 45px;
   height: 45px;
-}
-
-@-webkit-keyframes showBox {
-  from {
-    width: 0;
-    display: none;
-  }
-  to {
-    width: 200px;
-    display: block;
-  }
-}
-
-@keyframes showBox {
-  from {
-    width: 0;
-    display: none;
-  }
-  to {
-    width: 200px;
-    display: block;
-  }
-}
-
-.searchBox {
-  height: 40px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  -webkit-box-shadow: var(--shadow-3);
-          box-shadow: var(--shadow-3);
-  background-color: var(--background-color-2);
-  border-radius: 50px;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.searchBox:hover > .searchAria {
-  width: 200px;
-  display: block;
-}
-
-.searchBox .searchBtn {
-  height: 40px;
-  width: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.searchBox .searchBtn svg {
-  fill: var(--text-color-1);
-  width: 20px;
-  height: 20px;
-}
-
-.searchBox .searchAria {
-  height: 35px;
-  width: 0;
-  display: none;
-  padding: 0 1rem;
-  font-family: var(--poppins-font);
-  color: var(--text-color-1);
-  font-size: 1rem;
-  -webkit-animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
-          animation: showBox 0.6s cubic-bezier(0.63, 0.63, 0.43, 0.42);
-}
-
-.searchBox .searchAria:focus {
-  display: block;
-  width: 200px;
-}
-
-.darkModeBtn {
-  height: 40px;
-  width: 40px;
-  -webkit-box-shadow: var(--shadow-3);
-          box-shadow: var(--shadow-3);
-  background-color: var(--background-color-2);
-  border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.darkModeBtn svg {
-  fill: var(--text-color-1);
-  width: 25px;
-  height: 25px;
 }
 /*# sourceMappingURL=index.css.map */

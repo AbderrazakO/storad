@@ -15,12 +15,16 @@
 @import '../Components/Home/Popular/Slider/index';
 @import '../Components/Home/Popular/Card/index';
 
-// Footer
-@import '../Layouts/Footer/index';
-@import '../Components/Footer/SocialMedia/index';
-@import '../Components/Footer/Payement/index';
-
 //
 @import '../Components/Header/ButtonNav/SearchBox/index';
 // @import '../Components/Footer/SearchBox/index';
 @import '../Components/Header/ButtonNav/DarkModeBtn/index';
+
+// Shop
+@import '../Components/Shop/Filter/index';
+@import '../Components/Shop/Filter/CheckboxFilter/index';
+
+// Footer
+@import '../Layouts/Footer/index';
+@import '../Components/Footer/SocialMedia/index';
+@import '../Components/Footer/Payement/index';

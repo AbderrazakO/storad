@@ -1,0 +1,52 @@
+.filterSection {
+  height: 800px;
+  .filterMain {
+    width: max-content;
+    height: max-content;
+  }
+
+  .filterFooter {
+    width: max-content;
+    height: max-content;
+    padding: 0.5rem 0.75rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    .filterBtn {
+      width: max-content;
+      height: max-content;
+      padding: 0.5rem 1.75rem;
+      background-color: var(--main-color);
+      color: #fff;
+      text-transform: uppercase;
+      font-family: var(--poppins-font);
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .filterIcon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      cursor: pointer;
+      svg {
+        fill: var(--text-color-1);
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+}
