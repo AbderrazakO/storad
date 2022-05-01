@@ -4,7 +4,7 @@ import Check from './CheckboxFilter/Index'
 import { filterArray } from '../../../Assets/data/filter'
 
 const Index = () => {
-  console.log(filterArray)
+  // console.log(filterArray)
   return (
     <div className='filterSection'>
       <div className='filterMain'>

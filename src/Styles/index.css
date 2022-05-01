@@ -1885,48 +1885,6 @@ header #showNav:checked ~ .handleNavigator {
   height: 25px;
 }
 
-@-webkit-keyframes MoveIn {
-  from {
-    height: 0;
-  }
-  to {
-    height: -webkit-max-content;
-    height: max-content;
-  }
-}
-
-@keyframes MoveIn {
-  from {
-    height: 0;
-  }
-  to {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
-}
-
-@-webkit-keyframes MoveOut {
-  from {
-    height: -webkit-max-content;
-    height: max-content;
-  }
-  to {
-    height: 0;
-  }
-}
-
-@keyframes MoveOut {
-  from {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-  }
-  to {
-    height: 0;
-  }
-}
-
 .dropDownBox {
   margin: 0.25rem 0;
   width: 270px;
@@ -2003,9 +1961,9 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 10px;
 }
 

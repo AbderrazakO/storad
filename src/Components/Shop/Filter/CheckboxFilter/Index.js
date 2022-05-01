@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
+import { v4 as uuid } from 'uuid'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
   const [isDown, setIsDown] = useState(false)
@@ -23,7 +24,7 @@ const Index = ({ title = 'Untitled', options = [] }) => {
       <div ref={dropBox} className='dropWrapper' style={boxStyle}>
         {options.map((el) => {
           return (
-            <div className='dropRow'>
+            <div key={uuid()} className='dropRow'>
               <input
                 type='checkbox'
                 name={el}
