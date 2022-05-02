@@ -11,6 +11,8 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
   useEffect(() => {
     leftPoint.current.value = maxValue * 0
     rightPoint.current.value = maxValue * 0.6
+    minInput.current.value = maxValue * 0
+    maxInput.current.value = maxValue * 0.6
   }, [])
   //
   useEffect(() => {

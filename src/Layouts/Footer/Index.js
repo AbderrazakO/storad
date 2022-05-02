@@ -1,6 +1,6 @@
-import Logo from '../../Components/Footer/Logo/Index'
-import Media from '../../Components/Footer/SocialMedia/Index'
-import Search from '../../Components/Footer/SearchBox/SearchBox'
+import Logo from '../../Components/Root/Logo/Index'
+import Media from '../../Components/Root/SocialMedia/Index'
+import Search from '../../Components/Root/SearchBox/SearchBox'
 import Payement from '../../Components/Footer/Payement/Index'
 
 const Index = () => {

@@ -1,6 +1,6 @@
 import React from 'react'
 import ResNav from '../../Components/Header/ResponsiveNavBar/Index'
-import Logo from '../../Components/Header/Logo/Index'
+import Logo from '../../Components/Root/Logo/Index'
 import Nav from '../../Components/Header/Navigator/Index'
 import Buttons from '../../Components/Header/ButtonNav/Index'
 

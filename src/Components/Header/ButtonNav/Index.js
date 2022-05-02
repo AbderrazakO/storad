@@ -1,6 +1,6 @@
-import Search from './SearchBox/SearchBox'
-import Store from '../StoreBtn/Index'
-import DarkModeBtn from './DarkModeBtn/Index'
+import Search from '../../Root/SearchBox/SearchBox'
+import Store from '../../Root/StoreBtn/Index'
+import DarkModeBtn from '../../Root/DarkModeBtn/Index'
 
 const ButtonNav = () => {
   //

@@ -1,11 +1,16 @@
 @import './Root';
 
+// Root Components
+@import '../Components/Root/Logo/index';
+@import '../Components/Root/DarkModeBtn/index';
+@import '../Components/Root/SearchBox/index';
+@import '../Components/Root/SocialMedia/index';
+@import '../Components/Root/StoreBtn/index';
+
 // Header
 @import '../Components/Header/ResponsiveNavBar/index';
-@import '../Components/Header/Logo/index';
 @import '../Components/Header/Navigator/index';
 @import '../Components/Header/ButtonNav/index';
-@import '../Components/Header/StoreBtn/index';
 
 // Home
 @import '../Components/Home/Header/index';
@@ -15,11 +20,6 @@
 @import '../Components/Home/Popular/Slider/index';
 @import '../Components/Home/Popular/Card/index';
 
-//
-@import '../Components/Header/ButtonNav/SearchBox/index';
-// @import '../Components/Footer/SearchBox/index';
-@import '../Components/Header/ButtonNav/DarkModeBtn/index';
-
 // Shop
 @import '../Components/Shop/Filter/index';
 @import '../Components/Shop/Filter/CheckboxFilter/index';
@@ -27,5 +27,4 @@
 
 // Footer
 @import '../Layouts/Footer/index';
-@import '../Components/Footer/SocialMedia/index';
 @import '../Components/Footer/Payement/index';
