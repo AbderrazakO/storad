@@ -4,6 +4,8 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
   const leftPoint = useRef(null)
   const progress = useRef(null)
   const rightPoint = useRef(null)
+  const minInput = useRef(null)
+  const maxInput = useRef(null)
 
   //
   useEffect(() => {
@@ -13,6 +15,8 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
 
     progress.current.style.left = `${minValueP}%`
     progress.current.style.right = `${maxValueP}%`
+    minInput.current.value = minValueP * minValue
+    // console.log(minValueP, maxValueP)
   })
 
   //
@@ -21,8 +25,38 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
     const maxValueP =
       100 - (rightPoint.current.value / rightPoint.current.max) * 100
 
-    progress.current.style.left = `${minValueP}%`
-    progress.current.style.right = `${maxValueP}%`
+    console.log(
+      `Value One : ${maxValueP - minValueP} | Value Two : ${
+        maxValueP - maxValue
+      }`
+    )
+    if (maxValueP - minValueP < maxValue) {
+      leftPoint.current.value = maxValueP - maxValue
+    } else {
+      progress.current.style.left = `${minValueP}%`
+      progress.current.style.right = `${maxValueP}%`
+      minInput.current.value = (minValueP / 100) * maxValue
+      maxInput.current.value = ((100 - maxValueP) / 100) * maxValue
+    }
+
+    // console.log(minValueP * maxValue)
+  }
+
+  //
+  const setLeftPoint = (e) => {
+    e.preventDefault()
+    if (e.target.value >= maxValue || !e.target.value || e.target.value < 0)
+      return
+    leftPoint.current.value = e.target.value
+    // console.log(e.target.value)
+  }
+
+  const setRightPoint = (e) => {
+    e.preventDefault()
+    if (e.target.value >= maxValue || !e.target.value || e.target.value < 0)
+      return
+    rightPoint.current.value = e.target.value
+    // console.log(e.target.value)
   }
 
   return (
@@ -30,10 +64,32 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
       <div className='dragFilterTitle'>{`Price`}</div>
       <div className='valueBox'>
         <div className='cardValue'>
-          From <input type='text' name='' id='' /> $
+          From
+          <input
+            ref={minInput}
+            type='number'
+            name=''
+            id=''
+            className='newMinValue'
+            onChange={(e) => {
+              setLeftPoint(e)
+            }}
+          />
+          $
         </div>
         <div className='cardValue'>
-          Up To <input type='text' name='' id='' /> $
+          Up To
+          <input
+            ref={maxInput}
+            type='number'
+            name=''
+            id=''
+            className='newMaxValue'
+            onChange={(e) => {
+              setRightPoint(e)
+            }}
+          />
+          $
         </div>
       </div>
       <div className='dragAria'>

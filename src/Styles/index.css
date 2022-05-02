@@ -2085,7 +2085,7 @@ header #showNav:checked ~ .handleNavigator {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2096,14 +2096,14 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
 }
 
 .DragableFilter .valueBox .cardValue {
-  width: 100px;
+  width: calc(100% / 2);
   height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2118,16 +2118,27 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
-  background-color: #dcdddd;
+  border-radius: 2px;
+  background-color: #f3f3f3;
   font-family: var(--poppins-font);
   color: var(--text-color-1);
   font-size: 0.8rem;
   gap: 5px;
+  font-weight: 500;
 }
 
-.DragableFilter .valueBox .cardValue span {
-  font-weight: 600;
+.DragableFilter .valueBox .cardValue input[type='number'].newMinValue,
+.DragableFilter .valueBox .cardValue input[type='number'].newMaxValue {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 50px;
+  max-width: 50px;
+  height: 100%;
+  font-family: var(--poppins-font);
+  color: var(--text-color-1);
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .DragableFilter .dragAria {
