@@ -9,6 +9,11 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
 
   //
   useEffect(() => {
+    leftPoint.current.value = maxValue * 0
+    rightPoint.current.value = maxValue * 0.6
+  }, [])
+  //
+  useEffect(() => {
     const minValueP = (leftPoint.current.value / leftPoint.current.max) * 100
     const maxValueP =
       100 - (rightPoint.current.value / rightPoint.current.max) * 100
@@ -30,7 +35,7 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
         maxValueP - maxValue
       }`
     )
-    if (maxValueP - minValueP < maxValue) {
+    if (maxValueP - minValueP > maxValue) {
       leftPoint.current.value = maxValueP - maxValue
     } else {
       progress.current.style.left = `${minValueP}%`
@@ -48,6 +53,7 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
     if (e.target.value >= maxValue || !e.target.value || e.target.value < 0)
       return
     leftPoint.current.value = e.target.value
+    progress.current.style.left = `${(e.target.value / maxValue) * 100}%`
     // console.log(e.target.value)
   }
 
@@ -56,6 +62,7 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
     if (e.target.value >= maxValue || !e.target.value || e.target.value < 0)
       return
     rightPoint.current.value = e.target.value
+    progress.current.style.right = `${100 - (e.target.value / maxValue) * 100}%`
     // console.log(e.target.value)
   }
 

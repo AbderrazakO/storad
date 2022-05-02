@@ -41,7 +41,7 @@
       font-weight: 500;
       input[type='number'].newMinValue,
       input[type='number'].newMaxValue {
-        appearance: none;
+        appearance: textfield;
         width: 50px;
         max-width: 50px;
         height: 100%;
@@ -49,6 +49,10 @@
         color: var(--text-color-1);
         font-size: 1rem;
         font-weight: 700;
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+          appearance: none;
+        }
       }
     }
   }

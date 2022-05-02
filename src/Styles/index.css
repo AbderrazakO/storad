@@ -2129,9 +2129,9 @@ header #showNav:checked ~ .handleNavigator {
 
 .DragableFilter .valueBox .cardValue input[type='number'].newMinValue,
 .DragableFilter .valueBox .cardValue input[type='number'].newMaxValue {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
   width: 50px;
   max-width: 50px;
   height: 100%;
@@ -2139,6 +2139,13 @@ header #showNav:checked ~ .handleNavigator {
   color: var(--text-color-1);
   font-size: 1rem;
   font-weight: 700;
+}
+
+.DragableFilter .valueBox .cardValue input[type='number'].newMinValue::-webkit-inner-spin-button, .DragableFilter .valueBox .cardValue input[type='number'].newMinValue::-webkit-outer-spin-button,
+.DragableFilter .valueBox .cardValue input[type='number'].newMaxValue::-webkit-inner-spin-button,
+.DragableFilter .valueBox .cardValue input[type='number'].newMaxValue::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .DragableFilter .dragAria {
