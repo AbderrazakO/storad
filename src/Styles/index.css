@@ -2152,26 +2152,34 @@ header #showNav:checked ~ .handleNavigator {
   margin-bottom: 2rem;
 }
 
-.DragableFilter .dragAria .leftPoint,
-.DragableFilter .dragAria .rightPoint {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  position: absolute;
+.DragableFilter .dragAria input[type='range'].leftPoint,
+.DragableFilter .dragAria input[type='range'].rightPoint {
+  width: 100%;
   left: 0;
-  background-color: var(--main-color);
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   cursor: pointer;
+  pointer-events: none;
 }
 
-.DragableFilter .dragAria .ligne {
+.DragableFilter .dragAria input[type='range'].leftPoint::-webkit-slider-thumb,
+.DragableFilter .dragAria input[type='range'].rightPoint::-webkit-slider-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-appearance: none;
+          appearance: none;
+  background: var(--main-color);
+}
+
+.DragableFilter .dragAria .progress {
   position: absolute;
   height: 100%;
-  width: 10px;
+  width: auto;
   background-color: var(--main-color);
-}
-
-.DragableFilter .dragAria .rightPoint {
-  left: 50%;
 }
 
 footer {
