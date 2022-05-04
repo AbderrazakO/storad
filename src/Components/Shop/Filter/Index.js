@@ -8,19 +8,21 @@ const Index = () => {
   // console.log(filterArray)
   return (
     <div className='filterSection'>
-      <div className='filterMain'>
+      <input type='checkbox' name='wrapper' id='showFilterBtn' />
+      <label htmlFor='showFilterBtn' className='showBtn'>
+        Lol
+      </label>
+      <section className='filterWrapper'>
         <Drag />
         {filterArray.map((el) => {
           const { id, title, options } = el
           return <Check key={id} title={title} options={options} />
         })}
-      </div>
-      <div className='filterFooter'>
-        <div className='filterBtn'>Apply Filter</div>
-        <div className='filterIcon'>
+        <button className='filterBtn'>Apply Filter</button>
+        <button className='filterIcon'>
           <TrashIcon />
-        </div>
-      </div>
+        </button>
+      </section>
     </div>
   )
 }

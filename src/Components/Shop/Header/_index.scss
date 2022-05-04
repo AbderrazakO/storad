@@ -1,0 +1,37 @@
+.shopHeader {
+  width: 100%;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+  .SHeaderImg {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+  .searchBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    .searchAria {
+      display: flex;
+      width: 250px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shopHeader {
+    width: 100%;
+    height: 400px;
+
+    .SHeaderImg {
+      object-fit: cover;
+      width: 100%;
+      height: 400px;
+    }
+  }
+}

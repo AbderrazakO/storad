@@ -1855,27 +1855,77 @@ header #showNav:checked ~ .handleNavigator {
           justify-content: space-between;
 }
 
+@-webkit-keyframes moveIn {
+  from {
+    height: 0;
+    display: none;
+  }
+  to {
+    height: -webkit-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: flex;
+  }
+}
+
+@keyframes moveIn {
+  from {
+    height: 0;
+    display: none;
+  }
+  to {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@-webkit-keyframes moveOut {
+  from {
+    height: -webkit-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: flex;
+  }
+  to {
+    height: 0;
+    display: none;
+  }
+}
+
+@keyframes moveOut {
+  from {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  to {
+    height: 0;
+    display: none;
+  }
+}
+
 .filterSection {
-  height: 800px;
-}
-
-.filterSection .filterMain {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 100%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
 }
 
-.filterSection .filterFooter {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.filterSection #showFilterBtn {
+  display: none;
+}
+
+.filterSection #showFilterBtn:checked ~ .filterWrapper {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 0.5rem 0.75rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1889,10 +1939,28 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-animation: moveIn 0.8s ease;
+          animation: moveIn 0.8s ease;
 }
 
-.filterSection .filterFooter .filterBtn {
+.filterSection .showBtn {
+  width: 50px;
+  height: 50px;
+  background-color: saddlebrown;
+}
+
+.filterSection .filterWrapper {
+  display: none;
+  height: 0;
+  width: 100%;
+  -webkit-animation: moveOut 0.8s ease;
+          animation: moveOut 0.8s ease;
+}
+
+.filterSection .filterWrapper button.filterBtn {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
@@ -1910,11 +1978,11 @@ header #showNav:checked ~ .handleNavigator {
   cursor: pointer;
 }
 
-.filterSection .filterFooter .filterBtn:hover {
+.filterSection .filterWrapper button.filterBtn:hover {
   opacity: 0.9;
 }
 
-.filterSection .filterFooter .filterIcon {
+.filterSection .filterWrapper button.filterIcon {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -1926,7 +1994,7 @@ header #showNav:checked ~ .handleNavigator {
   cursor: pointer;
 }
 
-.filterSection .filterFooter .filterIcon svg {
+.filterSection .filterWrapper button.filterIcon svg {
   fill: var(--text-color-1);
   width: 20px;
   height: 20px;
@@ -2245,6 +2313,52 @@ header #showNav:checked ~ .handleNavigator {
   height: 100%;
   width: auto;
   background-color: var(--main-color);
+}
+
+.shopHeader {
+  width: 100%;
+  height: 200px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.shopHeader .SHeaderImg {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.shopHeader .searchBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0.9;
+}
+
+.shopHeader .searchBox .searchAria {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+}
+
+@media screen and (min-width: 1024px) {
+  .shopHeader {
+    width: 100%;
+    height: 400px;
+  }
+  .shopHeader .SHeaderImg {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 400px;
+  }
 }
 
 footer {

@@ -1,22 +1,55 @@
-.filterSection {
-  height: 800px;
-  .filterMain {
-    width: max-content;
+@keyframes moveIn {
+  from {
+    height: 0;
+    display: none;
+  }
+  to {
     height: max-content;
+    display: flex;
+  }
+}
+
+@keyframes moveOut {
+  from {
+    height: max-content;
+    display: flex;
+  }
+  to {
+    height: 0;
+    display: none;
+  }
+}
+
+.filterSection {
+  width: 100%;
+  height: max-content;
+
+  #showFilterBtn {
+    display: none;
+    &:checked ~ .filterWrapper {
+      height: max-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      animation: moveIn 0.8s ease;
+    }
   }
 
-  .filterFooter {
-    width: max-content;
-    height: max-content;
-    padding: 0.5rem 0.75rem;
+  .showBtn {
+    width: 50px;
+    height: 50px;
+    background-color: saddlebrown;
+  }
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-
-    .filterBtn {
+  .filterWrapper {
+    display: none;
+    height: 0;
+    width: 100%;
+    animation: moveOut 0.8s ease;
+    button.filterBtn {
       width: max-content;
       height: max-content;
       padding: 0.5rem 1.75rem;
@@ -33,7 +66,7 @@
       }
     }
 
-    .filterIcon {
+    button.filterIcon {
       width: 2rem;
       height: 2rem;
       border-radius: 50%;
