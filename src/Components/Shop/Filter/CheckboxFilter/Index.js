@@ -1,7 +1,10 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
 import { v4 as uuid } from 'uuid'
-import { addToFilter } from '../../../../Assets/data/setFilter'
+import {
+  addToFilter,
+  removeFromFilter,
+} from '../../../../Assets/data/setFilter'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
   const [check, setCheck] = useState(false)
@@ -33,13 +36,8 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 id={`lab${el}`}
                 className='checkboxInput'
                 onChange={(event) => {
-                  if (event.currentTarget.checked) {
-                    const newObject = { from: `${title}`, option: `${el}` }
-                    addToFilter(newObject)
-                    // alert(`${el} from ${title} is checked`)
-                  } else {
-                    alert('not checked')
-                  }
+                  if (event.currentTarget.checked) return addToFilter(title, el)
+                  removeFromFilter(title, el)
                 }}
               />
               <label htmlFor={`lab${el}`} className='checkboxLabel'>

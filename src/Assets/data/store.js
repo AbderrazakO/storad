@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs'
 
-const products = [
+let products = [
   {
     Id: 0,
     Name: `Women's Tanjun Move to Zero`,
@@ -387,12 +387,11 @@ const products = [
   },
 ]
 
-let store = []
-export const trackProducts = new BehaviorSubject(store)
+export const trackProducts = new BehaviorSubject(products)
 
 export const updateProducts = (key, value) => {
-  store = products.filter((product) => product[key] == value)
-  trackProducts.next(store)
+  products = products.filter((product) => product[key] == value)
+  trackProducts.next(products)
 }
 
 // export const removeFromBag = (id) => {

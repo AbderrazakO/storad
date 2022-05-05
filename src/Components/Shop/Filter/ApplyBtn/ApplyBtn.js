@@ -3,18 +3,19 @@ import { updateProducts } from '../../../../Assets/data/store'
 import { trackFilter } from '../../../../Assets/data/setFilter'
 
 const ApplyBtn = () => {
-  const [asFilter, setAsFilter] = useState([])
+  const [asFilter, setAsFilter] = useState({})
   useEffect(() => {
     trackFilter.subscribe((el) => {
       setAsFilter(el)
     })
   })
-  console.log(asFilter)
+
   return (
     <button
       className='filterBtn'
       onClick={() => {
-        asFilter.forEach((e) => updateProducts(e.from, e.option))
+        console.log(asFilter)
+        // asFilter.forEach((e) => updateProducts(e.from, e.option))
       }}
     >
       Apply Filter

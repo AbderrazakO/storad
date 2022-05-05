@@ -2,6 +2,7 @@ import { TrashIcon, ArrowDown, FilterIcon } from './icon'
 import Check from './CheckboxFilter/Index'
 import Drag from './DragFilter/Index'
 import ABtn from './ApplyBtn/ApplyBtn'
+import RBtn from './ResetBtn/ResetBtn'
 import { filterArray } from '../../../Assets/data/filter'
 
 const Index = () => {
@@ -24,9 +25,7 @@ const Index = () => {
           return <Check key={id} title={title} options={options} />
         })}
         <ABtn />
-        <button className='filterIcon'>
-          <TrashIcon />
-        </button>
+        <RBtn />
       </section>
     </div>
   )
