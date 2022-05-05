@@ -56,9 +56,16 @@
         font-size: 1rem;
         cursor: pointer;
       }
-      &:hover {
-        opacity: 0.7;
+      img {
+        object-fit: cover;
       }
+      //
+      &:hover {
+        img {
+          opacity: 0.7;
+        }
+      }
+
       &:first-child {
         grid-area: Ar2;
         img {

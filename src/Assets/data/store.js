@@ -1,5 +1,5 @@
 import { BehaviorSubject } from 'rxjs'
-// Img: [``, ``, ``, ``],
+
 const products = [
   {
     Id: 0,
@@ -27,9 +27,9 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/57/46/1/57461_right_xsmall.jpg`,
       `https://www.famousfootwear.com/blob/product-images/20000/99/43/5/99435_right_xsmall.jpg`,
     ],
-    Brand: 'Sneaker',
-    Category: ``,
-    Size: [34, 36, 40, 42, 46],
+    Brand: 'Nike',
+    Category: `Sneaker`,
+    Size: 34,
     Color: ``,
     Width: ``,
   },
@@ -44,8 +44,8 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/57/33/0/57330_right_xsmall.jpg`,
     ],
     Brand: 'Converse',
-    Category: `Sneakers`,
-    Size: ``,
+    Category: `Sneaker`,
+    Size: 42,
     Color: ``,
     Width: ``,
   },
@@ -60,8 +60,8 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/71/56/5/71565_right_xsmall.jpg`,
     ],
     Brand: 'Converse',
-    Category: ` Sneakers`,
-    Size: ``,
+    Category: ` Sneaker`,
+    Size: 38,
     Color: ``,
     Width: ``,
   },
@@ -76,8 +76,8 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/55/26/3/55263_right_xsmall.jpg`,
     ],
     Brand: 'Nike',
-    Category: `Sneakers`,
-    Size: ``,
+    Category: `Sneaker`,
+    Size: 38,
     Color: ``,
     Width: ``,
   },
@@ -92,8 +92,8 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/55/50/5/55505_right_xsmall.jpg`,
     ],
     Brand: 'Nike',
-    Category: `Sandals`,
-    Size: ``,
+    Category: `Sandal`,
+    Size: 35,
     Color: ``,
     Width: ``,
   },
@@ -108,8 +108,8 @@ const products = [
       `https://www.famousfootwear.com/blob/product-images/20000/44/97/3/44973_right_xsmall.jpg`,
     ],
     Brand: 'DrScholls',
-    Category: `Sandals`,
-    Size: ``,
+    Category: `Sandal`,
+    Size: 34,
     Color: ``,
     Width: ``,
   },
@@ -125,7 +125,7 @@ const products = [
     ],
     Brand: 'Nike',
     Category: `Sneaker`,
-    Size: ``,
+    Size: 40,
     Color: ``,
     Width: ``,
   },
@@ -141,7 +141,7 @@ const products = [
     ],
     Brand: 'Adidas',
     Category: `Sneaker`,
-    Size: ``,
+    Size: 41,
     Color: ``,
     Width: ``,
   },
@@ -157,7 +157,7 @@ const products = [
     ],
     Brand: 'Vans',
     Category: `Sneaker`,
-    Size: ``,
+    Size: 41,
     Color: ``,
     Width: ``,
   },
@@ -173,7 +173,7 @@ const products = [
     ],
     Brand: 'Crocs',
     Category: `Sandal`,
-    Size: ``,
+    Size: 39,
     Color: ``,
     Width: ``,
   },
@@ -189,7 +189,7 @@ const products = [
     ],
     Brand: 'Teva',
     Category: `Sandal`,
-    Size: ``,
+    Size: 36,
     Color: ``,
     Width: ``,
   },
@@ -205,7 +205,7 @@ const products = [
     ],
     Brand: 'Native',
     Category: `Sneaker`,
-    Size: ``,
+    Size: 36,
     Color: ``,
     Width: ``,
   },
@@ -387,4 +387,15 @@ const products = [
   },
 ]
 
-export const trackProducts = new BehaviorSubject(products)
+let store = []
+export const trackProducts = new BehaviorSubject(store)
+
+export const updateProducts = (key, value) => {
+  store = products.filter((product) => product[key] == value)
+  trackProducts.next(store)
+}
+
+// export const removeFromBag = (id) => {
+//   filter = filter.filter((product) => product.id !== id)
+//   trackFilter.next(filter)
+// }

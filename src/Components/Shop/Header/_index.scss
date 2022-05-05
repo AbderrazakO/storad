@@ -8,7 +8,7 @@
   .SHeaderImg {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: auto;
   }
   .searchBox {
     position: absolute;
@@ -36,9 +36,8 @@
     grid-area: header;
 
     .SHeaderImg {
-      object-fit: cover;
       width: 100%;
-      height: 400px;
+      // height: 400px;
     }
   }
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import { TrashIcon, ArrowUp, ArrowDown, FilterIcon } from './icon'
+import { TrashIcon, ArrowDown, FilterIcon } from './icon'
 import Check from './CheckboxFilter/Index'
 import Drag from './DragFilter/Index'
+import ABtn from './ApplyBtn/ApplyBtn'
 import { filterArray } from '../../../Assets/data/filter'
 
 const Index = () => {
@@ -23,7 +23,7 @@ const Index = () => {
           const { id, title, options } = el
           return <Check key={id} title={title} options={options} />
         })}
-        <button className='filterBtn'>Apply Filter</button>
+        <ABtn />
         <button className='filterIcon'>
           <TrashIcon />
         </button>

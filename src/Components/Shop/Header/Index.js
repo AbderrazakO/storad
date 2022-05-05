@@ -1,11 +1,14 @@
 import React from 'react'
-import SIM from '../../../Assets/images/shop/01.webp'
 import Search from '../../Root/SearchBox/SearchBox'
 
 const Index = () => {
   return (
     <div className='shopHeader'>
-      <img src={SIM} alt='Shop Header Image' className='SHeaderImg' />
+      <img
+        src={`https://images.unsplash.com/photo-1584590069631-1c180f90a54c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80`}
+        alt='Shop Header Image'
+        className='SHeaderImg'
+      />
       <Search />
     </div>
   )
