@@ -1,5 +1,5 @@
 import React from 'react'
-import { TrashIcon } from './icon'
+import { TrashIcon, ArrowUp, ArrowDown, FilterIcon } from './icon'
 import Check from './CheckboxFilter/Index'
 import Drag from './DragFilter/Index'
 import { filterArray } from '../../../Assets/data/filter'
@@ -10,7 +10,12 @@ const Index = () => {
     <div className='filterSection'>
       <input type='checkbox' name='wrapper' id='showFilterBtn' />
       <label htmlFor='showFilterBtn' className='showBtn'>
-        Lol
+        <div className='filterIcon'>
+          <FilterIcon />
+        </div>
+        <div className='showIcon'>
+          <ArrowDown />
+        </div>
       </label>
       <section className='filterWrapper'>
         <Drag />

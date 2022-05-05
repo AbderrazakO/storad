@@ -1,0 +1,15 @@
+.mainSection {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .mainSection {
+    grid-area: main;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSection {
+    grid-area: main;
+  }
+}

@@ -5,7 +5,7 @@ import Main from '../../Components/Shop/Main/Index'
 
 const Index = () => {
   return (
-    <main>
+    <main className='shopMain'>
       <Header />
       <Filter />
       <Main />

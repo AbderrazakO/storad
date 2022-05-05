@@ -1,0 +1,35 @@
+.shopMain {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+  .shopMain {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      'header header header'
+      'filter main main';
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shopMain {
+    width: 100%;
+    height: max-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      'header header header header'
+      'filter main main main';
+  }
+}

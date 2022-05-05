@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&display=swap");
 :root {
   --righteous-font: 'Righteous', cursive;
   --dongle-font: 'Dongle', sans-serif;
@@ -1855,6 +1854,59 @@ header #showNav:checked ~ .handleNavigator {
           justify-content: space-between;
 }
 
+.shopMain {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+  .shopMain {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -ms-grid;
+    display: grid;
+    gap: 1rem;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 'header header header' 'filter main main';
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .shopMain {
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr auto;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: 'header header header header' 'filter main main main';
+  }
+}
+
 @-webkit-keyframes moveIn {
   from {
     height: 0;
@@ -1933,23 +1985,46 @@ header #showNav:checked ~ .handleNavigator {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
   gap: 20px;
   -webkit-animation: moveIn 0.8s ease;
           animation: moveIn 0.8s ease;
 }
 
 .filterSection .showBtn {
-  width: 50px;
-  height: 50px;
-  background-color: saddlebrown;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: #e4e3e3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+}
+
+.filterSection .showBtn svg {
+  width: 25px;
+  height: 25px;
+  fill: #04000f;
 }
 
 .filterSection .filterWrapper {
@@ -1998,6 +2073,18 @@ header #showNav:checked ~ .handleNavigator {
   fill: var(--text-color-1);
   width: 20px;
   height: 20px;
+}
+
+@media screen and (min-width: 750px) {
+  .filterSection {
+    grid-area: filter;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .filterSection {
+    grid-area: filter;
+  }
 }
 
 .dropDownBox {
@@ -2348,16 +2435,39 @@ header #showNav:checked ~ .handleNavigator {
   width: 250px;
 }
 
+@media screen and (min-width: 750px) {
+  .shopHeader {
+    grid-area: header;
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .shopHeader {
     width: 100%;
     height: 400px;
+    grid-area: header;
   }
   .shopHeader .SHeaderImg {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
     height: 400px;
+  }
+}
+
+.mainSection {
+  width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+  .mainSection {
+    grid-area: main;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mainSection {
+    grid-area: main;
   }
 }
 
