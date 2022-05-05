@@ -8,14 +8,14 @@ const Index = () => {
   useEffect(() => {
     trackProducts.subscribe((el) => setStore(el))
   })
-  console.log(store)
+  // console.log(store)
   return (
     <div className='mainSection'>
       {store ? (
         store.map((el) => {
           const { Id, Name, Price, Img, Brand, Category, Size, Color, Width } =
             el
-          return <Card key={Id} imgSrc={Img} name={Name} price={Price} />
+          return <Card key={Id} imgSrc={Img[0]} name={Name} price={Price} />
         })
       ) : (
         <></>
