@@ -13,13 +13,9 @@ const Index = () => {
     <div className='mainSection'>
       {store ? (
         store.map((el) => {
-          const { element } = el
-          return element.map((item) => {
-            const { name, imgSrc, price } = item
-            return (
-              <Card key={uuid()} imgSrc={imgSrc} name={name} price={price} />
-            )
-          })
+          const { Id, Name, Price, Img, Brand, Category, Size, Color, Width } =
+            el
+          return <Card key={Id} imgSrc={Img} name={Name} price={Price} />
         })
       ) : (
         <></>
