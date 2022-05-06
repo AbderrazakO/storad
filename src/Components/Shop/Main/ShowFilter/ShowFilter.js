@@ -1,38 +1,44 @@
 import { useEffect, useState } from 'react'
-import {
-  trackFilter,
-  removeFromFilter,
-} from '../../../../Assets/data/setFilter'
+import { trackFilterOptions } from '../../../../Assets/data/filter'
 
 const ShowFilter = () => {
-  const [filter, setFilter] = useState({})
+  const [dataFilter, setDataFilter] = useState([])
   useEffect(() => {
-    trackFilter.subscribe((el) => setFilter(el))
+    trackFilterOptions.subscribe((el) => setDataFilter(el))
 
-    Object.values(filter).forEach((e) => {
-      e.map((el) => {
-        console.log(el)
-      })
-    })
+    console.log(dataFilter)
+    //
+    // filter.map((e) => {
+    //   return e.options.map((el) => {
+    //     !el.isChecked ? console.log(el.name) : console.log('')
+    //   })
+    // })
+    //
   })
   // return <div className='itemBtn'>Hello</div>
   //
   return (
     <div className='showFiltersSection'>
-      {Object.values(filter).forEach((e) => {
+      <div className='itemBtn'>Hello</div>
+      {/* {filter.map((e) => {
+        return e.options.map((el) => {
+          el.isChecked ? <div className='itemBtn'>Hello</div> : <></>
+        })
+      })} */}
+      {/* {Object.values(filter).forEach((e) => {
         e.map((el) => {
           return (
             <button
               className='itemBtn'
               onClick={() => {
-                removeFromFilter()
+                // removeFromFilter()
               }}
             >
               {el}
             </button>
           )
         })
-      })}
+      })} */}
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
 import { updateProducts } from '../../../../Assets/data/store'
-import { trackFilter } from '../../../../Assets/data/setFilter'
+import { trackFilterOptions } from '../../../../Assets/data/filter'
 
 const ApplyBtn = () => {
   const [asFilter, setAsFilter] = useState({})
   useEffect(() => {
-    trackFilter.subscribe((el) => {
+    trackFilterOptions.subscribe((el) => {
       setAsFilter(el)
     })
   })
@@ -14,8 +14,15 @@ const ApplyBtn = () => {
     <button
       className='filterBtn'
       onClick={() => {
-        // console.log(asFilter)
-        // asFilter.forEach((e) => updateProducts(e.from, e.option))
+        asFilter.forEach((e) => {
+          let newArray = []
+          e.options.forEach((el) => {
+            if (el.isChecked) {
+              newArray.push(el.name)
+            }
+          })
+          updateProducts(e.title, newArray)
+        })
       }}
     >
       Apply Filter

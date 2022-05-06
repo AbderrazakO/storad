@@ -35,6 +35,7 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 className='checkboxInput'
                 defaultChecked={isChecked}
                 onChange={(event) => {
+                  // setCheck(check ? false : true)
                   if (event.currentTarget.checked) {
                     updateBoxStatus(title, id, true)
                   } else {

@@ -389,8 +389,8 @@ let products = [
 
 export const trackProducts = new BehaviorSubject(products)
 
-export const updateProducts = (key, value) => {
-  products = products.filter((product) => product[key] == value)
+export const updateProducts = (key, values) => {
+  products = products.filter((product) => values.includes(product[key]))
   trackProducts.next(products)
 }
 
