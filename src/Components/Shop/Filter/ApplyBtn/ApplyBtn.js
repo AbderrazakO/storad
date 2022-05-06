@@ -14,7 +14,7 @@ const ApplyBtn = () => {
     <button
       className='filterBtn'
       onClick={() => {
-        console.log(asFilter)
+        // console.log(asFilter)
         // asFilter.forEach((e) => updateProducts(e.from, e.option))
       }}
     >

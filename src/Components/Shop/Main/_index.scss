@@ -2,12 +2,34 @@
   width: 100%;
   height: max-content;
   padding: 0.5rem 0.75rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  gap: 15px;
+
+  .showFiltersSection {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    .itemBtn {
+      width: max-content;
+      height: max-content;
+      padding: 0.25rem 0.5rem;
+      font-family: var(--poppins-font);
+      font-size: 0.8rem;
+      border-radius: 5px;
+      background-color: rgb(222, 222, 223);
+      cursor: pointer;
+    }
+  }
+
+  .cards {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
 
 @media screen and (min-width: 750px) {

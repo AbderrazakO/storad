@@ -1,12 +1,21 @@
-import { TrashIcon, ArrowDown, FilterIcon } from './icon'
+import { useState, useEffect } from 'react'
+
+import { ArrowDown, FilterIcon } from './icon'
 import Check from './CheckboxFilter/Index'
 import Drag from './DragFilter/Index'
 import ABtn from './ApplyBtn/ApplyBtn'
 import RBtn from './ResetBtn/ResetBtn'
-import { filterArray } from '../../../Assets/data/filter'
+import { trackFilterOptions } from '../../../Assets/data/filter'
 
 const Index = () => {
-  // console.log(filterArray)
+  const [data, setData] = useState([])
+  useEffect(() => {
+    trackFilterOptions.subscribe((item) => {
+      setData(item)
+    })
+  })
+
+  //
   return (
     <div className='filterSection'>
       <input type='checkbox' name='wrapper' id='showFilterBtn' />
@@ -20,7 +29,7 @@ const Index = () => {
       </label>
       <section className='filterWrapper'>
         <Drag />
-        {filterArray.map((el) => {
+        {data.map((el) => {
           const { id, title, options } = el
           return <Check key={id} title={title} options={options} />
         })}

@@ -28,20 +28,25 @@ const Index = ({ title = 'Untitled', options = [] }) => {
       </button>
       <div ref={dropBox} className='dropWrapper' style={boxStyle}>
         {options.map((el) => {
+          const { id, name, isChecked } = el
           return (
-            <div key={uuid()} className='dropRow'>
+            <div key={id} className='dropRow'>
               <input
                 type='checkbox'
-                name={el}
-                id={`lab${el}`}
+                name={name}
+                id={`lab${name}`}
                 className='checkboxInput'
+                defaultChecked={!isChecked}
                 onChange={(event) => {
-                  if (event.currentTarget.checked) return addToFilter(title, el)
-                  removeFromFilter(title, el)
+                  // if (event.currentTarget.checked) {
+                  //   addToFilter(title, el)
+                  // } else {
+                  //   removeFromFilter(title, el)
+                  // }
                 }}
               />
-              <label htmlFor={`lab${el}`} className='checkboxLabel'>
-                {el}
+              <label htmlFor={`lab${name}`} className='checkboxLabel'>
+                {name}
               </label>
             </div>
           )
