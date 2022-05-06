@@ -1,7 +1,7 @@
 .shopCard {
   width: 100%;
-  min-height: 300px;
-  padding: 5px;
+  min-height: 400px;
+  padding: 0.75rem 0.75rem;
   background-color: var(--background-color-2);
   display: flex;
   flex-direction: column;
@@ -10,12 +10,13 @@
 
   .cardImg {
     width: 100%;
-    height: 80%;
-    border-radius: 10px;
+    height: 250px;
+    border-radius: 2px;
     display: grid;
     place-items: center;
     overflow: hidden;
     background-color: #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
     img {
       width: 100%;
       height: auto;
@@ -24,14 +25,53 @@
 
   .productInfo {
     width: 100%;
-    height: 15%;
-    padding: 0.5rem 0.25rem;
+    height: 100px;
     font-family: var(--poppins-font);
     color: var(--text-color-1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+
+    .brandName {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #b4b3b3;
+    }
+
+    .productName {
+      font-size: 1rem;
+      font-weight: 600;
+      width: 100%;
+      text-align: center;
+      color: var(--text-color-1);
+      text-overflow: clip;
+    }
+
+    .productPrice {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1rem;
+      font-weight: 500;
+      color: #6d6b6b;
+    }
+  }
+
+  .addBtn {
+    width: 100%;
+    height: max-content;
+    padding: 0.5rem 0.75rem;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--poppins-font);
   }
 }
 

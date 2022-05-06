@@ -6,7 +6,7 @@ const ShowFilter = () => {
   useEffect(() => {
     trackFilterOptions.subscribe((el) => setDataFilter(el))
 
-    console.log(dataFilter)
+    // console.log(dataFilter)
     //
     // filter.map((e) => {
     //   return e.options.map((el) => {

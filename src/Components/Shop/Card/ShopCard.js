@@ -1,14 +1,26 @@
-const Index = ({ imgSrc, name = 'Untitled', price = 0 }) => {
+const Index = ({
+  productImg,
+  brandName,
+  productName = 'Untitled',
+  productPrice = 0,
+}) => {
   //
   return (
     <div className='productCard shopCard'>
       <div className='cardImg'>
-        <img srcSet={imgSrc} alt={`${name} picture`} width='250' height='200' />
+        <img
+          srcSet={productImg}
+          alt={`Picture of ${productName}`}
+          width='250'
+          height='200'
+        />
       </div>
-      <div className='productInfo'>
-        <div className='productName'>{name}</div>
-        <div className='productPrice'>{`${price} $`}</div>
-      </div>
+      <section className='productInfo'>
+        {brandName ? <div className='brandName'>{brandName}</div> : <></>}
+        <div className='productName'>{productName}</div>
+        <div className='productPrice'>{`$${productPrice}`}</div>
+      </section>
+      <div className='addBtn'>Add To Cart</div>
     </div>
   )
 }

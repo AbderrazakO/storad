@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs'
 
-let products = [
+const products = [
   {
     Id: 0,
     Name: `Women's Tanjun Move to Zero`,
@@ -387,14 +387,4 @@ let products = [
   },
 ]
 
-export const trackProducts = new BehaviorSubject(products)
-
-export const updateProducts = (key, values) => {
-  products = products.filter((product) => !values.includes(product[key]))
-  trackProducts.next(products)
-}
-
-// export const removeFromBag = (id) => {
-//   filter = filter.filter((product) => product.id !== id)
-//   trackFilter.next(filter)
-// }
+export const trackStaticProducts = new BehaviorSubject(products)
