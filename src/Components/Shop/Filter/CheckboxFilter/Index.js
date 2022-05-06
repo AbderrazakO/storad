@@ -1,10 +1,7 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
 import { v4 as uuid } from 'uuid'
-import {
-  addToFilter,
-  removeFromFilter,
-} from '../../../../Assets/data/setFilter'
+import { updateBoxStatus } from '../../../../Assets/data/filter'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
   const [check, setCheck] = useState(false)
@@ -36,13 +33,13 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 name={name}
                 id={`lab${name}`}
                 className='checkboxInput'
-                defaultChecked={!isChecked}
+                defaultChecked={isChecked}
                 onChange={(event) => {
-                  // if (event.currentTarget.checked) {
-                  //   addToFilter(title, el)
-                  // } else {
-                  //   removeFromFilter(title, el)
-                  // }
+                  if (event.currentTarget.checked) {
+                    updateBoxStatus(title, id, true)
+                  } else {
+                    updateBoxStatus(title, id, false)
+                  }
                 }}
               />
               <label htmlFor={`lab${name}`} className='checkboxLabel'>

@@ -70,3 +70,17 @@ let filterOptions = [
 ]
 
 export const trackFilterOptions = new BehaviorSubject(filterOptions)
+
+export const updateBoxStatus = (title, id, value) => {
+  filterOptions.forEach((e) => {
+    if (e.title === title) {
+      e.options.forEach((el) => {
+        if (el.id === id) {
+          el.isChecked = value
+        }
+      })
+    }
+  })
+
+  trackFilterOptions.next(filterOptions)
+}
