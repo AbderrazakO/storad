@@ -5,24 +5,31 @@ import { trackStaticProducts } from '../../../Assets/data/staticStore'
 import ShowF from './ShowFilter/ShowFilter'
 
 const Index = () => {
+  const [filterID, setFilterID] = useState([])
   const [store, setStore] = useState([])
   const [staticStore, setStaticStore] = useState([])
 
   useEffect(() => {
     trackProducts.subscribe((el) => setStore(el))
-  })
+  }, [trackProducts])
+
+  //
   useEffect(() => {
-    trackStaticProducts.subscribe((el) => setStore(el))
-  })
+    trackStaticProducts.subscribe((el) => setStaticStore(el))
+  }, [trackStaticProducts])
   // console.log(store)
+  useEffect(() => {
+    let newArray = []
+    store.forEach((e) => newArray.push(e.Id))
+    setFilterID(newArray)
+  }, [store])
+
   return (
     <div className='mainSection'>
       <ShowF />
       <div className='cards'>
-        {store ? (
-          store.map((el) => {
-            console.log(store)
-            console.log(staticStore)
+        {staticStore ? (
+          staticStore.map((el) => {
             const {
               Id,
               Name,
@@ -34,7 +41,7 @@ const Index = () => {
               Color,
               Width,
             } = el
-
+            if (Id in filterID && staticStore.length != filterID.length) return
             return (
               <Card
                 key={Id}
