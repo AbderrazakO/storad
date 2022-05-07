@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { ShopIcon, CloseIcon } from './icon'
-import { trackBag, removeFromBag, addToBag } from '../../../Assets/data/bag'
+import { trackBag, removeFromBag, addToBag } from '../../../Data/Bag'
 
 const ShopButton = () => {
   // console.log('hi')

@@ -84,3 +84,5 @@ export const updateBoxStatus = (title, id, value) => {
 
   trackFilterOptions.next(filterOptions)
 }
+
+export const resetFilter = () => {}

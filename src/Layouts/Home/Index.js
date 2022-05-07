@@ -1,5 +1,3 @@
-import { useEffect, useState } from 'react'
-import { trackProducts } from '../../Assets/data/store'
 import Header from '../../Components/Home/Header/Index'
 import Categories from '../../Components/Home/Categories/Index'
 import About from '../../Components/Home/AboutUs/Index'

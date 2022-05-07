@@ -5,7 +5,7 @@ import Check from './CheckboxFilter/CheckboxFilter'
 import Drag from './DragFilter/DragFilter'
 import ABtn from './ApplyBtn/ApplyBtn'
 import RBtn from './ResetBtn/ResetBtn'
-import { trackFilterOptions } from '../../../Assets/data/filter'
+import { trackFilterOptions } from '../../../Data/Filter'
 
 const Index = () => {
   const [data, setData] = useState([])

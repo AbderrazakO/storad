@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { updateProducts } from '../../../../Assets/data/store'
-import { trackFilterOptions } from '../../../../Assets/data/filter'
+import { updateProducts } from '../../../../Data/Store'
+import { trackFilterOptions } from '../../../../Data/Filter'
 
 const ApplyBtn = () => {
   const [asFilter, setAsFilter] = useState({})

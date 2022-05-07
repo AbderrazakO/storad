@@ -387,3 +387,5 @@ let store = [
 ]
 
 export const trackStore = new BehaviorSubject(store)
+
+export const updateProducts = () => {}

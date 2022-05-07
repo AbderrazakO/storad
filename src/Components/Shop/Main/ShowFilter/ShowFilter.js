@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { trackFilterOptions } from '../../../../Assets/data/filter'
+import { trackFilterOptions } from '../../../../Data/Filter'
 
 const ShowFilter = () => {
   const [dataFilter, setDataFilter] = useState([])

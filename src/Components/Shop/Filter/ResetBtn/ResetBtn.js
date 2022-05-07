@@ -1,6 +1,6 @@
 import React from 'react'
 import { TrashIcon } from './icon'
-import { resetFilter } from '../../../../Assets/data/setFilter'
+import { resetFilter } from '../../../../Data/Filter'
 
 const ResetBtn = () => {
   return (
