@@ -1,7 +1,7 @@
 import React from 'react'
 import Search from '../../Root/SearchBox/SearchBox'
 
-const Index = () => {
+const Header = () => {
   return (
     <div className='shopHeader'>
       <img
@@ -14,4 +14,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Header

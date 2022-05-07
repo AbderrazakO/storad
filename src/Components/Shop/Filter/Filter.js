@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 
 import { ArrowDown, FilterIcon } from './icon'
-import Check from './CheckboxFilter/Index'
-import Drag from './DragFilter/Index'
+import Check from './CheckboxFilter/CheckboxFilter'
+import Drag from './DragFilter/DragFilter'
 import ABtn from './ApplyBtn/ApplyBtn'
 import RBtn from './ResetBtn/ResetBtn'
 import { trackFilterOptions } from '../../../Assets/data/filter'

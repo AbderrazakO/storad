@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs'
 
-const products = [
+let store = [
   {
     Id: 0,
     Name: `Women's Tanjun Move to Zero`,
@@ -54,8 +54,7 @@ const products = [
     Name: `Women's Chuck Taylor All Star Hi Lift Platform Sneaker`,
     Price: 30,
     Img: [
-      `https://www.famousfootwear.com/blob/product-images/20000/53/18/9/53189_right_xsmall.jpg`,
-      `https://www.famousfootwear.com/blob/product-images/20000/53/18/9/53189_pair_xsmall.jpg`,
+      `https://www.famousfootwear.com/blob/product-images/20000/44/87/0/44870_pair_large.jpg`,
       `https://www.famousfootwear.com/blob/product-images/20000/53/21/1/53211_right_xsmall.jpg`,
       `https://www.famousfootwear.com/blob/product-images/20000/71/56/5/71565_right_xsmall.jpg`,
     ],
@@ -387,4 +386,4 @@ const products = [
   },
 ]
 
-export const trackStaticProducts = new BehaviorSubject(products)
+export const trackStore = new BehaviorSubject(store)

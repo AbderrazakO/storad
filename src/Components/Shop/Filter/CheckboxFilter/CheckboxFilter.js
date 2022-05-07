@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
-import { v4 as uuid } from 'uuid'
-import { updateBoxStatus } from '../../../../Assets/data/filter'
+import { updateBoxStatus } from '../../../../Data/Filter'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
   const [check, setCheck] = useState(false)
@@ -35,7 +34,6 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 className='checkboxInput'
                 defaultChecked={isChecked}
                 onChange={(event) => {
-                  // setCheck(check ? false : true)
                   if (event.currentTarget.checked) {
                     updateBoxStatus(title, id, true)
                   } else {
