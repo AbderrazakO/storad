@@ -28,7 +28,7 @@ const Index = () => {
         </div>
       </label>
       <section className='filterWrapper'>
-        <Drag />
+        <Drag minValue={0} maxValue={200} />
         {data.map((el) => {
           const { id, title, options } = el
           return <Check key={id} title={title} options={options} />

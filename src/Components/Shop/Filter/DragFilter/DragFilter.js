@@ -1,18 +1,25 @@
 import { useEffect, useRef, useState } from 'react'
+import { trackAria, updateAria } from '../../../../Data/DragFilter'
 
 const Index = ({ minValue = 0, maxValue = 1000 }) => {
+  const [filter, setFilter] = useState({})
   const leftPoint = useRef(null)
   const progress = useRef(null)
   const rightPoint = useRef(null)
   const minInput = useRef(null)
   const maxInput = useRef(null)
 
+  useEffect(() => {
+    trackAria.subscribe((el) => setFilter(el))
+    updateAria(minInput.current.value, maxInput.current.value)
+  })
   //
   useEffect(() => {
     leftPoint.current.value = maxValue * 0
-    rightPoint.current.value = maxValue * 0.6
+    rightPoint.current.value = maxValue * 1
     minInput.current.value = maxValue * 0
-    maxInput.current.value = maxValue * 0.6
+    maxInput.current.value = maxValue * 1
+    // updateAria(minInput.current.value, maxInput.current.value)
   }, [])
   //
   useEffect(() => {
@@ -24,6 +31,7 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
     progress.current.style.right = `${maxValueP}%`
     minInput.current.value = minValueP * minValue
     // console.log(minValueP, maxValueP)
+    // updateAria(minValueP, maxValueP)
   })
 
   //
@@ -32,11 +40,11 @@ const Index = ({ minValue = 0, maxValue = 1000 }) => {
     const maxValueP =
       100 - (rightPoint.current.value / rightPoint.current.max) * 100
 
-    console.log(
-      `Value One : ${maxValueP - minValueP} | Value Two : ${
-        maxValueP - maxValue
-      }`
-    )
+    // console.log(
+    //   `Value One : ${maxValueP - minValueP} | Value Two : ${
+    //     maxValueP - maxValue
+    //   }`
+    // )
     if (maxValueP - minValueP > maxValue) {
       leftPoint.current.value = maxValueP - maxValue
     } else {

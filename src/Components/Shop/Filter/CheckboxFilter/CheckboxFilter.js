@@ -1,9 +1,8 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
-import { updateBoxStatus } from '../../../../Data/Filter'
+import { updateFilterStatus } from '../../../../Data/Filter'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
-  const [check, setCheck] = useState(false)
   const [isDown, setIsDown] = useState(false)
   const dropBox = useRef(null)
   const boxStyle = isDown
@@ -35,9 +34,9 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 defaultChecked={isChecked}
                 onChange={(event) => {
                   if (event.currentTarget.checked) {
-                    updateBoxStatus(title, id, true)
+                    updateFilterStatus(title, id, true)
                   } else {
-                    updateBoxStatus(title, id, false)
+                    updateFilterStatus(title, id, false)
                   }
                 }}
               />
