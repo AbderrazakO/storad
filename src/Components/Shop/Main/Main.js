@@ -37,8 +37,8 @@ const Main = () => {
             const { Id, Name, Price, Img, Brand } = el
             // console.log(Price > 50)
             // if (Id in filterID && staticStore.length != filterID.length) return
-            console.log(filterDrag)
-            if (Price <= filterDrag.min || Price >= filterDrag.max) return <></>
+            // console.log(filterDrag)
+            // if (Price <= filterDrag.min || Price >= filterDrag.max) return <></>
             return (
               <Card
                 key={Id}

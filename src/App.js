@@ -1,9 +1,10 @@
 import './Styles/index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './Layouts/Header/Index'
-import Hmain from './Layouts/Home/Index'
-import ShopMain from './Layouts/Shop/Index'
+import Home from './Layouts/Home/Index'
+import Shop from './Layouts/Shop/Index'
 import Footer from './Layouts/Footer/Index'
+import About from './Layouts/About/index'
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           element={
             <>
               <Header />
-              <Hmain />
+              <Home />
               <Footer />
             </>
           }
@@ -24,17 +25,17 @@ function App() {
           element={
             <>
               <Header />
-              <ShopMain />
+              <Shop />
               <Footer />
             </>
           }
         />
         <Route
-          path='/help'
+          path='/about'
           element={
             <>
               <Header />
-              <Hmain />
+              <About />
               <Footer />
             </>
           }

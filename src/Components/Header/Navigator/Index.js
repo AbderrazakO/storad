@@ -36,13 +36,13 @@ const Navigator = () => {
         </Link>
 
         <Link
-          to='/help'
+          to='/about'
           className={`link ${active[2]}`}
           onClick={() => {
             activeLink(2)
           }}
         >
-          Help
+          About
         </Link>
       </div>
     </>
