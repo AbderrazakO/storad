@@ -24,7 +24,6 @@ function App() {
           path='/shop'
           element={
             <>
-              <Header />
               <Shop />
               <Footer />
             </>

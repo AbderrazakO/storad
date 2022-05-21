@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { trackAria, updateAria } from '../../../../Data/DragFilter'
 
 const Index = ({ minValue = 0, maxValue = 1000 }) => {
-  const [filter, setFilter] = useState({})
   const leftPoint = useRef(null)
   const progress = useRef(null)
   const rightPoint = useRef(null)
   const minInput = useRef(null)
   const maxInput = useRef(null)
 
-  useEffect(() => {
-    trackAria.subscribe((el) => setFilter(el))
-    updateAria(minInput.current.value, maxInput.current.value)
-  })
   //
   useEffect(() => {
     leftPoint.current.value = maxValue * 0

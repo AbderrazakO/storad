@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
-import { updateFilterStatus } from '../../../../Data/Filter'
 
 const Index = ({ title = 'Untitled', options = [] }) => {
   const [isDown, setIsDown] = useState(false)
@@ -34,9 +33,9 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 defaultChecked={isChecked}
                 onChange={(event) => {
                   if (event.currentTarget.checked) {
-                    updateFilterStatus(title, id, true)
+                    // updateFilterStatus(title, id, true)
                   } else {
-                    updateFilterStatus(title, id, false)
+                    // updateFilterStatus(title, id, false)
                   }
                 }}
               />

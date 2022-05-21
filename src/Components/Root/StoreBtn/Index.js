@@ -1,16 +1,10 @@
 import { useState, useEffect } from 'react'
 import { ShopIcon, CloseIcon } from './icon'
-import { trackBag, removeFromBag, addToBag } from '../../../Data/Bag'
 
 const ShopButton = () => {
   // console.log('hi')
   const [bagDisplay, setBagDisplay] = useState('none')
-  const [newBag, setNewBag] = useState([])
-  useEffect(() => {
-    trackBag.subscribe((el) => {
-      setNewBag(el)
-    })
-  })
+
   // console.log(newBag)
   //
   return (
@@ -21,11 +15,8 @@ const ShopButton = () => {
           setBagDisplay('flex')
         }}
       >
-        {newBag.length ? (
-          <div className='notificationIcon'>{newBag.length}</div>
-        ) : (
-          <></>
-        )}
+        <div className='notificationIcon'>{0}</div>
+
         <ShopIcon />
       </div>
 
@@ -43,7 +34,7 @@ const ShopButton = () => {
             </div>
           </div>
           <div className='bagMain'>
-            {newBag ? (
+            {/* {newBag ? (
               newBag.map((e) => {
                 const { id, name, imgSrc, price } = e
                 return (
@@ -78,7 +69,7 @@ const ShopButton = () => {
               })
             ) : (
               <></>
-            )}
+            )} */}
           </div>
           <div className='bagFooter'>
             <div className='bagFrow'>
