@@ -4,11 +4,10 @@ import Drag from './DragFilter/DragFilter'
 import ABtn from './ApplyBtn/ApplyBtn'
 import RBtn from './ResetBtn/ResetBtn'
 import { connect } from 'react-redux'
-import { INCREMENT } from '../../../Redux/actions'
 
-const Index = ({ data, dispatch }) => {
+const Index = ({ data }) => {
   //
-  console.log(dispatch)
+  // console.log(dispatch)
   return (
     <div className='filterSection'>
       <input type='checkbox' name='wrapper' id='showFilterBtn' />
@@ -34,12 +33,8 @@ const Index = ({ data, dispatch }) => {
 }
 //
 const mapStateToProps = (state) => {
-  // console.log(state.filter)
+  console.log(state.filter)
   return { data: state.filter }
 }
-//
-const mapDispatchToProps = (dispatch) => {
-  return { lol: () => dispatch({ type: INCREMENT }) }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index)
+export default connect(mapStateToProps)(Index)

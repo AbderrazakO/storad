@@ -1,7 +1,9 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
+import { connect } from 'react-redux'
+import { UPDATE } from '../../../../Redux/actions'
 
-const Index = ({ title = 'Untitled', options = [] }) => {
+const Index = ({ title = 'Untitled', options = [], Update }) => {
   const [isDown, setIsDown] = useState(false)
   const dropBox = useRef(null)
   const boxStyle = isDown
@@ -33,9 +35,10 @@ const Index = ({ title = 'Untitled', options = [] }) => {
                 defaultChecked={isChecked}
                 onChange={(event) => {
                   if (event.currentTarget.checked) {
-                    // updateFilterStatus(title, id, true)
+                    Update(title, id, true)
+                    // console.log(key)
                   } else {
-                    // updateFilterStatus(title, id, false)
+                    Update(title, id, false)
                   }
                 }}
               />
@@ -49,5 +52,12 @@ const Index = ({ title = 'Untitled', options = [] }) => {
     </div>
   )
 }
+//
+const mapDispatchToProps = (dispatch) => {
+  return {
+    Update: (title, id, status) =>
+      dispatch({ type: UPDATE, title, id, status }),
+  }
+}
 
-export default Index
+export default connect(null, mapDispatchToProps)(Index)
