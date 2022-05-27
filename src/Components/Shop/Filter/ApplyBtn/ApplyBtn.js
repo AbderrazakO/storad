@@ -1,11 +1,21 @@
-import { useState, useEffect } from 'react'
+import { connect } from 'react-redux'
+import { UPDATE_STORE } from '../../../../Redux/actions'
 
-const ApplyBtn = () => {
+const ApplyBtn = ({ UpdateStore }) => {
   return (
-    <button className='filterBtn' onClick={() => {}}>
+    <button
+      className='filterBtn'
+      onClick={() => {
+        UpdateStore()
+      }}
+    >
       Apply Filter
     </button>
   )
 }
-
-export default ApplyBtn
+const mapDispatchToProps = (dispatch) => {
+  return {
+    UpdateStore: () => dispatch({ type: UPDATE_STORE }),
+  }
+}
+export default connect(null, mapDispatchToProps)(ApplyBtn)

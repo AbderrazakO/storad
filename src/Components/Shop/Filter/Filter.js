@@ -33,7 +33,7 @@ const Index = ({ data }) => {
 }
 //
 const mapStateToProps = (state) => {
-  console.log(state.filter)
+  // console.log(state.filter)
   return { data: state.filter }
 }
 

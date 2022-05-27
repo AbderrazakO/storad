@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { ArrowUp, ArrowDown } from './icons'
 import { connect } from 'react-redux'
-import { UPDATE } from '../../../../Redux/actions'
+import { UPDATE_FILTER } from '../../../../Redux/actions'
 
 const Index = ({ title = 'Untitled', options = [], Update }) => {
   const [isDown, setIsDown] = useState(false)
@@ -56,7 +56,7 @@ const Index = ({ title = 'Untitled', options = [], Update }) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     Update: (title, id, status) =>
-      dispatch({ type: UPDATE, title, id, status }),
+      dispatch({ type: UPDATE_FILTER, title, id, status }),
   }
 }
 
