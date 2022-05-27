@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Card from '../Card/ShopCard'
-import ShowF from './ShowFilter/ShowFilter'
 import { connect } from 'react-redux'
 
 const Main = ({ store = [], filter }) => {
   return (
     <div className='mainSection'>
-      <ShowF />
       <div className='cards'>
         {store ? (
           store.map((el) => {

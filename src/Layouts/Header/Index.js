@@ -4,14 +4,14 @@ import Logo from '../../Components/Root/Logo/Index'
 import Nav from '../../Components/Header/Navigator/Index'
 import Buttons from '../../Components/Header/ButtonNav/Index'
 
-const Index = () => {
+const Index = ({ obj }) => {
   return (
     <>
       <ResNav
         logo={<Logo />}
         navBar={
           <>
-            <Nav />
+            <Nav initialeState={obj} />
             <Buttons />
           </>
         }

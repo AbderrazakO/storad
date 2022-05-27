@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Navigator = () => {
-  let [active, setActive] = useState(['active', '', ''])
+const Navigator = ({ initialeState = ['active', '', ''] }) => {
+  let [active, setActive] = useState(initialeState)
 
   let activeLink = (id) => {
     let newList = []
