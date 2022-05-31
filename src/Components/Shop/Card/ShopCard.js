@@ -22,7 +22,12 @@ const ShopCard = ({
         <div className='productName'>{productName}</div>
         <div className='productPrice'>{`$${productPrice}`}</div>
       </section>
-      <CardBtn />
+      <CardBtn
+        productImg={productImg}
+        brandName={brandName}
+        productName={productName}
+        productPrice={productPrice}
+      />
     </div>
   )
 }

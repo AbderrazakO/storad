@@ -103,7 +103,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         overflow-y: scroll;
         .bagCard {
@@ -116,6 +116,8 @@
           background-color: var(--background-color-2);
           border-radius: 10px 0 0 10px;
           .cardImg {
+            min-width: 100px;
+            min-height: 100px;
             width: 100px;
             height: 100px;
             border-radius: 10px;

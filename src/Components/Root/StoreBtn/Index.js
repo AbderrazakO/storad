@@ -1,11 +1,17 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { ShopIcon, CloseIcon } from './icon'
+import { connect } from 'react-redux'
+import { REMOVEITEM } from '../../../Redux/actions'
 
-const ShopButton = () => {
-  // console.log('hi')
+const ShopButton = ({ Bag = [], RemoveItem }) => {
   const [bagDisplay, setBagDisplay] = useState('none')
-
-  // console.log(newBag)
+  const totalValue = (arr) => {
+    let count = 0
+    arr.forEach((element) => {
+      count += element.price
+    })
+    return count.toFixed(2)
+  }
   //
   return (
     <div className='popUpContainer'>
@@ -15,8 +21,11 @@ const ShopButton = () => {
           setBagDisplay('flex')
         }}
       >
-        <div className='notificationIcon'>{0}</div>
-
+        {!Bag.length ? (
+          <></>
+        ) : (
+          <div className='notificationIcon'>{Bag.length}</div>
+        )}
         <ShopIcon />
       </div>
 
@@ -34,8 +43,8 @@ const ShopButton = () => {
             </div>
           </div>
           <div className='bagMain'>
-            {/* {newBag ? (
-              newBag.map((e) => {
+            {Bag ? (
+              Bag.map((e) => {
                 const { id, name, imgSrc, price } = e
                 return (
                   <div key={id} className='bagCard'>
@@ -56,8 +65,7 @@ const ShopButton = () => {
                         <button
                           className='cardBtn'
                           onClick={() => {
-                            console.log(id)
-                            removeFromBag(id)
+                            RemoveItem(id)
                           }}
                         >
                           remove
@@ -69,12 +77,12 @@ const ShopButton = () => {
               })
             ) : (
               <></>
-            )} */}
+            )}
           </div>
           <div className='bagFooter'>
             <div className='bagFrow'>
               <div className='rowTitle'>Total :</div>
-              <div className='rowValue'>{`$ 32 `}</div>
+              <div className='rowValue'>{`$${!Bag ? 0 : totalValue(Bag)}`}</div>
             </div>
             <button className='bagBtn'>Checkout</button>
           </div>
@@ -84,4 +92,18 @@ const ShopButton = () => {
   )
 }
 
-export default ShopButton
+const mapDispatchToProps = (dispatch) => {
+  return {
+    RemoveItem: (id) =>
+      dispatch({
+        type: REMOVEITEM,
+        Id: id,
+      }),
+  }
+}
+
+const mapStateToProps = (state) => {
+  return { Bag: [...state.bag] }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ShopButton)

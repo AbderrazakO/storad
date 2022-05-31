@@ -1,6 +1,6 @@
 import { ArrowDown, FilterIcon } from './icon'
 import Check from './CheckboxFilter/CheckboxFilter'
-import Drag from './DragFilter/DragFilter'
+// import Drag from './DragFilter/DragFilter'
 import ABtn from './ApplyBtn/ApplyBtn'
 import RBtn from './ResetBtn/ResetBtn'
 import { connect } from 'react-redux'
@@ -20,7 +20,7 @@ const Index = ({ data }) => {
         </div>
       </label>
       <section className='filterWrapper'>
-        <Drag minValue={0} maxValue={200} />
+        {/* <Drag minValue={0} maxValue={200} /> */}
         {data.map((el) => {
           const { id, title, options } = el
           return <Check key={id} title={title} options={options} />
