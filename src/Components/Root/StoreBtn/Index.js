@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { ShopIcon, CloseIcon } from './icon'
 import { connect } from 'react-redux'
-import { REMOVEITEM } from '../../../Redux/actions'
+import { REMOVEITEM, INCREMENT, DECREMENT } from '../../../Redux/actions'
 
-const ShopButton = ({ Bag = [], RemoveItem }) => {
+const ShopButton = ({ Bag = [], RemoveItem, Increment, Decrement }) => {
   const [bagDisplay, setBagDisplay] = useState('none')
   const totalValue = (arr) => {
     let count = 0
@@ -45,7 +45,7 @@ const ShopButton = ({ Bag = [], RemoveItem }) => {
           <div className='bagMain'>
             {Bag ? (
               Bag.map((e) => {
-                const { id, name, imgSrc, price } = e
+                const { id, name, imgSrc, price, quantity } = e
                 return (
                   <div key={id} className='bagCard'>
                     <div className='cardImg'>
@@ -58,9 +58,23 @@ const ShopButton = ({ Bag = [], RemoveItem }) => {
                       </div>
                       <div className='pRow'>
                         <div className='box'>
-                          <div className='cardBtn plusBtn'>+</div>
-                          <div className='productQuantity'>2</div>
-                          <div className='cardBtn minusBtn'>-</div>
+                          <div
+                            className='cardBtn plusBtn'
+                            onClick={() => {
+                              Increment(id)
+                            }}
+                          >
+                            +
+                          </div>
+                          <div className='productQuantity'>{quantity}</div>
+                          <div
+                            className='cardBtn minusBtn'
+                            onClick={() => {
+                              Decrement(id)
+                            }}
+                          >
+                            -
+                          </div>
                         </div>
                         <button
                           className='cardBtn'
@@ -97,6 +111,16 @@ const mapDispatchToProps = (dispatch) => {
     RemoveItem: (id) =>
       dispatch({
         type: REMOVEITEM,
+        Id: id,
+      }),
+    Increment: (id) =>
+      dispatch({
+        type: INCREMENT,
+        Id: id,
+      }),
+    Decrement: (id) =>
+      dispatch({
+        type: DECREMENT,
         Id: id,
       }),
   }

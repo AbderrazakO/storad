@@ -5,6 +5,8 @@ import {
   UPDATE_STORE,
   ADDTOBAG,
   REMOVEITEM,
+  INCREMENT,
+  DECREMENT,
 } from './actions'
 import data from './initialState'
 
@@ -12,6 +14,7 @@ const reducer = (state, action) => {
   const oldFilter = [...state.filter]
   //
   switch (action.type) {
+    // Dispatch Filter
     case UPDATE_FILTER:
       const { title, id, status } = {
         title: action.title,
@@ -41,6 +44,8 @@ const reducer = (state, action) => {
         store: [...data.store],
         filter: [...data.filter],
       }
+
+    // Dispatch Store
     case UPDATE_STORE:
       let oldStore // Initial Store That Will handle Every Last Change
       let newStore = [] // Empty Array Tha we will push our objects
@@ -69,6 +74,8 @@ const reducer = (state, action) => {
         store: newStore,
         filter: [...state.filter],
       }
+
+    // Dispatch Bag
     case ADDTOBAG:
       const { name, imgSrc, price } = {
         imgSrc: action.ProductImg,
@@ -77,7 +84,7 @@ const reducer = (state, action) => {
       }
 
       if (!state.bag.length) {
-        const newBag = [{ id: uuid(), name, price, imgSrc }]
+        const newBag = [{ id: uuid(), name, price, imgSrc, quantity: 1 }]
         return {
           store: [...state.store],
           filter: [...state.filter],
@@ -90,7 +97,7 @@ const reducer = (state, action) => {
         if (e.name == name) isExist = true
       })
       if (!isExist) {
-        newBag.push({ id: uuid(), name, price, imgSrc })
+        newBag.push({ id: uuid(), name, price, imgSrc, quantity: 1 })
         return {
           store: [...state.store],
           filter: [...state.filter],
@@ -112,6 +119,52 @@ const reducer = (state, action) => {
         filter: [...state.filter],
         bag: newBag3,
       }
+    case INCREMENT:
+      let incBag = [...state.bag]
+      let incBag2 = []
+      incBag.map((e) => {
+        if (e.id !== action.Id) incBag2.push(e)
+        else {
+          const quantity = e.quantity + 1
+          const newproduct = {
+            id: e.id,
+            imgSrc: e.imgSrc,
+            name: e.name,
+            price: e.price,
+            quantity,
+          }
+          incBag2.push(newproduct)
+        }
+      })
+      return {
+        store: [...state.store],
+        filter: [...state.filter],
+        bag: incBag2,
+      }
+    case DECREMENT:
+      let decBag = [...state.bag]
+      let decBag2 = []
+      decBag.map((e) => {
+        if (e.id !== action.Id) decBag2.push(e)
+        else {
+          const quantity = e.quantity === 1 ? e.quantity : e.quantity - 1
+          const newproduct = {
+            id: e.id,
+            imgSrc: e.imgSrc,
+            name: e.name,
+            price: e.price,
+            quantity,
+          }
+          decBag2.push(newproduct)
+        }
+      })
+      return {
+        store: [...state.store],
+        filter: [...state.filter],
+        bag: decBag2,
+      }
+
+    // Default
     default:
       return state
   }
