@@ -15,8 +15,9 @@ const ShopButton = ({ Bag = [], RemoveItem, Increment, Decrement }) => {
   //
   return (
     <div className='popUpContainer'>
-      <div
+      <button
         className='popUpButton'
+        aria-label='Bag icon'
         onClick={() => {
           setBagDisplay('flex')
         }}
@@ -27,20 +28,21 @@ const ShopButton = ({ Bag = [], RemoveItem, Increment, Decrement }) => {
           <div className='notificationIcon'>{Bag.length}</div>
         )}
         <ShopIcon />
-      </div>
+      </button>
 
       <div className='bagContainer' style={{ display: bagDisplay }}>
         <div className='bagWrapper'>
           <div className='bagHeader'>
             <div className='bagTitle'>Your Bag</div>
-            <div
+            <button
               className='closeBtn'
+              aria-label='Close Bag'
               onClick={() => {
                 setBagDisplay('none')
               }}
             >
               <CloseIcon />
-            </div>
+            </button>
           </div>
           <div className='bagMain'>
             {Bag ? (
@@ -58,26 +60,29 @@ const ShopButton = ({ Bag = [], RemoveItem, Increment, Decrement }) => {
                       </div>
                       <div className='pRow'>
                         <div className='box'>
-                          <div
+                          <button
                             className='cardBtn plusBtn'
+                            aria-label=' Increment Btn'
                             onClick={() => {
                               Increment(id)
                             }}
                           >
                             +
-                          </div>
+                          </button>
                           <div className='productQuantity'>{quantity}</div>
-                          <div
+                          <button
                             className='cardBtn minusBtn'
+                            aria-label='Decrement Btn'
                             onClick={() => {
                               Decrement(id)
                             }}
                           >
                             -
-                          </div>
+                          </button>
                         </div>
                         <button
                           className='cardBtn'
+                          aria-label='Remove Btn'
                           onClick={() => {
                             RemoveItem(id)
                           }}
@@ -98,7 +103,9 @@ const ShopButton = ({ Bag = [], RemoveItem, Increment, Decrement }) => {
               <div className='rowTitle'>Total :</div>
               <div className='rowValue'>{`$${!Bag ? 0 : totalValue(Bag)}`}</div>
             </div>
-            <button className='bagBtn'>Checkout</button>
+            <button className='bagBtn' aria-label='Checkout'>
+              Checkout
+            </button>
           </div>
         </div>
       </div>

@@ -15,35 +15,35 @@ const Index = () => {
         </div>
         <div className='footerCol'>
           <h1 className='footerTitle'>Shop</h1>
-          <a href='/shop/sneakers' className='footerLink'>
+          <a href='/shop/sneakers' aria-label='Sneakers' className='footerLink'>
             Sneakers
           </a>
-          <a href='/shop/sandals' className='footerLink'>
+          <a href='/shop/sandals' aria-label='Sandals' className='footerLink'>
             Sandals
           </a>
-          <a href='/shop/loafers' className='footerLink'>
+          <a href='/shop/loafers' aria-label='Loafers' className='footerLink'>
             Loafers
           </a>
-          <a href='/shop/boots' className='footerLink'>
+          <a href='/shop/boots' aria-label='Boots' className='footerLink'>
             Boots
           </a>
-          <a href='/shop/heels' className='footerLink'>
+          <a href='/shop/heels' aria-label='Heels' className='footerLink'>
             Heels
           </a>
         </div>
         <div className='footerCol'>
           <h1 className='footerTitle'>Social</h1>
           <Media />
-          <a href='/' className='footerLink'>
+          <a href='/' aria-label='Facebook' className='footerLink'>
             Facebook
           </a>
-          <a href='/' className='footerLink'>
+          <a href='/' aria-label='Whatsapp' className='footerLink'>
             Whatsapp
           </a>
-          <a href='/' className='footerLink'>
+          <a href='/' aria-label='Instagram' className='footerLink'>
             Instagram
           </a>
-          <a href='/' className='footerLink'>
+          <a href='/' aria-label='Discord' className='footerLink'>
             Discord
           </a>
         </div>

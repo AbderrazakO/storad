@@ -13,7 +13,7 @@ const Index = () => {
         <p className='description'>
           Our goal is to make you happy, Explore more great products with us .
         </p>
-        <a href='/shop' className='homeHeaderBtn'>
+        <a href='/shop' className='homeHeaderBtn' aria-label='Start Shopping'>
           Start Shopping
         </a>
       </article>

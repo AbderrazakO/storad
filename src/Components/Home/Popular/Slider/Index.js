@@ -168,7 +168,7 @@ const Index = ({
         </div>
       </div>
       <div className='sliderFooter'>
-        <a href={link} className='sliderBtn'>
+        <a href={link} className='sliderBtn' aria-label=' View All Products'>
           View All Products
         </a>
       </div>

@@ -7,6 +7,7 @@ const ResetBtn = ({ ResetFilter }) => {
   return (
     <button
       className='filterIcon'
+      aria-label='Reset Filter'
       onClick={() => {
         ResetFilter()
       }}

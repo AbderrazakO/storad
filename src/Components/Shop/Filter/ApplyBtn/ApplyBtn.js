@@ -5,6 +5,7 @@ const ApplyBtn = ({ UpdateStore }) => {
   return (
     <button
       className='filterBtn'
+      aria-label=' Apply Filter'
       onClick={() => {
         UpdateStore()
       }}

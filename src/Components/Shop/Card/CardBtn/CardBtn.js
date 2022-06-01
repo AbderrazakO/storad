@@ -12,6 +12,7 @@ const CardBtn = ({
   return (
     <div
       className='addBtn'
+      aria-label='Add To Cart'
       onClick={() => {
         AddToBag(productImg, brandName, productName, productPrice)
       }}

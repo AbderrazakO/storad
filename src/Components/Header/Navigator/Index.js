@@ -18,6 +18,7 @@ const Navigator = ({ initialeState = ['active', '', ''] }) => {
       <div className='sectionsNav'>
         <Link
           to='/'
+          aria-label='Home Page'
           className={`link ${active[0]}`}
           onClick={() => {
             activeLink(0)
@@ -27,6 +28,7 @@ const Navigator = ({ initialeState = ['active', '', ''] }) => {
         </Link>
         <Link
           to='/shop'
+          aria-label='Shop Page'
           className={`link ${active[1]}`}
           onClick={() => {
             activeLink(1)
@@ -37,6 +39,7 @@ const Navigator = ({ initialeState = ['active', '', ''] }) => {
 
         <Link
           to='/about'
+          aria-label='About Page'
           className={`link ${active[2]}`}
           onClick={() => {
             activeLink(2)

@@ -15,6 +15,7 @@ const Index = ({ title = 'Untitled', options = [], Update }) => {
     <div className='dropDownBox'>
       <button
         className='dropBoxHeader'
+        aria-label='Lorem Ipsum'
         onClick={() => {
           isDown ? setIsDown(false) : setIsDown(true)
         }}
