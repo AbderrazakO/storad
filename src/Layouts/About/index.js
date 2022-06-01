@@ -1,7 +1,7 @@
 import React from 'react'
 
 const index = () => {
-  return <div>index</div>
+  return <section className='aboutSection'>index</section>
 }
 
 export default index

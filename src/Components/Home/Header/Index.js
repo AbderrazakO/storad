@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import img from './00.webp'
 
 const Index = () => {
@@ -14,9 +13,9 @@ const Index = () => {
         <p className='description'>
           Our goal is to make you happy, Explore more great products with us .
         </p>
-        <Link to='/shop' className='homeHeaderBtn'>
+        <a href='/shop' className='homeHeaderBtn'>
           Start Shopping
-        </Link>
+        </a>
       </article>
       <article className='presentationSection'>
         <div className='mainImg'>

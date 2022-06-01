@@ -7,6 +7,7 @@ const Index = ({
   title2 = 'Untitled',
   cards,
   heightPerc = 120,
+  link,
 }) => {
   const [isDown, setIsDown] = useState(false) // Mouse Down Status
   const sliderWrapper = useRef(null) // Get Wrapper Div
@@ -167,7 +168,9 @@ const Index = ({
         </div>
       </div>
       <div className='sliderFooter'>
-        <div className='sliderBtn'>View All Products</div>
+        <a href={link} className='sliderBtn'>
+          View All Products
+        </a>
       </div>
     </div>
   )

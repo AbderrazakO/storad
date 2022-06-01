@@ -20,7 +20,7 @@ const Main = ({ store = [], filter }) => {
             )
           })
         ) : (
-          <></>
+          <>Sorry, there is no matching product</>
         )}
       </div>
     </div>

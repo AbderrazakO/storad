@@ -95,6 +95,7 @@ const Index = () => {
 
             return <Card key={id} imgSrc={imgSrc} name={name} price={price} />
           })}
+          link={'/shop'}
         />
       }
       <Brands />
@@ -107,6 +108,7 @@ const Index = () => {
 
             return <Card key={id} imgSrc={imgSrc} name={name} price={price} />
           })}
+          link={'/shop'}
         />
       }
     </main>
