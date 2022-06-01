@@ -48,7 +48,7 @@ const Index = () => {
           </a>
         </div>
         <div className='footerCol'>
-          <Search />
+          <Search id={'footerSearch'} />
           <div className='footerTitle'>Payement</div>
           <Payement />
         </div>

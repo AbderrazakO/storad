@@ -152,9 +152,6 @@ const Index = ({
             <RightArrowIcon />
           </button>
         </div>
-        {/* <Link to={'/shop'} className='sliderMore'> */}
-        {/* See All
-        </Link> */}
       </div>
       <div className='sliderContainer'>
         <div

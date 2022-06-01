@@ -9,7 +9,7 @@ const Header = () => {
         alt='Shop Header Image'
         className='SHeaderImg'
       />
-      <Search />
+      <Search id={'ShopSearch'} />
     </div>
   )
 }

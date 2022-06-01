@@ -6,7 +6,7 @@ const ButtonNav = () => {
   //
   return (
     <div className='headerButtonContainer'>
-      <Search />
+      <Search id={'HeaderSearch'} />
       <Store />
       <DarkModeBtn />
     </div>

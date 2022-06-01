@@ -2672,6 +2672,14 @@ header #showNav:checked ~ .handleNavigator {
   font-family: var(--poppins-font);
 }
 
+.shopCard .addBtn:hover {
+  opacity: 0.8;
+}
+
+.shopCard .addBtn:focus {
+  background-color: #6d6b6b;
+}
+
 @media screen and (min-width: 650px) {
   .shopCard {
     width: 250px;

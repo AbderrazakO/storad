@@ -72,6 +72,12 @@
     cursor: pointer;
     font-size: 1rem;
     font-family: var(--poppins-font);
+    &:hover {
+      opacity: 0.8;
+    }
+    &:focus {
+      background-color: #6d6b6b;
+    }
   }
 }
 
